@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F082E03178EA83F5BB0452F /* Pods_Microtonal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */; };
+		7073C506461C455F72CFE039 /* Pods_MicrotonalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86E16B596914AA97EF3D39A /* Pods_MicrotonalUITests.framework */; };
 		716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B7F1F65994B00AADA1A /* AppDelegate.swift */; };
 		716B3B821F65994B00AADA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B811F65994B00AADA1A /* ViewController.swift */; };
 		716B3B851F65994B00AADA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B831F65994B00AADA1A /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		716B3B8A1F65994B00AADA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B881F65994B00AADA1A /* LaunchScreen.storyboard */; };
 		716B3B951F65994B00AADA1A /* MicrotonalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B941F65994B00AADA1A /* MicrotonalTests.swift */; };
 		716B3BA01F65994B00AADA1A /* MicrotonalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */; };
+		716B3BB01F659CB500AADA1A /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716B3BAF1F659CB500AADA1A /* Keyboard.xib */; };
+		716B3BB21F65A13100AADA1A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB11F65A13100AADA1A /* Keyboard.swift */; };
+		D0989AF7EDF35AEC5B879CEF /* Pods_MicrotonalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Microtonal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19237B1C4D5A2EAA75592C51 /* Pods-MicrotonalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D347DCD335E486B8F241ADF /* Pods-Microtonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microtonal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Microtonal/Pods-Microtonal.release.xcconfig"; sourceTree = "<group>"; };
+		6BDC929FE8AA5E38FAC709D1 /* Pods-MicrotonalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		716B3B7C1F65994B00AADA1A /* Microtonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Microtonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716B3B7F1F65994B00AADA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716B3B811F65994B00AADA1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,13 @@
 		716B3B9B1F65994B00AADA1A /* MicrotonalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicrotonalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrotonalUITests.swift; sourceTree = "<group>"; };
 		716B3BA11F65994B00AADA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		716B3BAF1F659CB500AADA1A /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		716B3BB11F65A13100AADA1A /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrotonalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F38548DBD3C255141FC5F45 /* Pods-MicrotonalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests.release.xcconfig"; sourceTree = "<group>"; };
+		C86E16B596914AA97EF3D39A /* Pods_MicrotonalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrotonalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26F62EA494CBB65DACE4BD7 /* Pods-MicrotonalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E44CCB917C729CDE9D029E47 /* Pods-Microtonal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microtonal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Microtonal/Pods-Microtonal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F082E03178EA83F5BB0452F /* Pods_Microtonal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0989AF7EDF35AEC5B879CEF /* Pods_MicrotonalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +86,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7073C506461C455F72CFE039 /* Pods_MicrotonalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59EE1F9928D1C6C95CA78A66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44CCB917C729CDE9D029E47 /* Pods-Microtonal.debug.xcconfig */,
+				1D347DCD335E486B8F241ADF /* Pods-Microtonal.release.xcconfig */,
+				19237B1C4D5A2EAA75592C51 /* Pods-MicrotonalTests.debug.xcconfig */,
+				8F38548DBD3C255141FC5F45 /* Pods-MicrotonalTests.release.xcconfig */,
+				D26F62EA494CBB65DACE4BD7 /* Pods-MicrotonalUITests.debug.xcconfig */,
+				6BDC929FE8AA5E38FAC709D1 /* Pods-MicrotonalUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		716B3B731F65994B00AADA1A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +113,8 @@
 				716B3B931F65994B00AADA1A /* MicrotonalTests */,
 				716B3B9E1F65994B00AADA1A /* MicrotonalUITests */,
 				716B3B7D1F65994B00AADA1A /* Products */,
+				59EE1F9928D1C6C95CA78A66 /* Pods */,
+				98B217592E3B44A9DE335BF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +131,8 @@
 		716B3B7E1F65994B00AADA1A /* Microtonal */ = {
 			isa = PBXGroup;
 			children = (
+				716B3BAE1F659B2200AADA1A /* Keyboard */,
+				716B3BAD1F659A9F00AADA1A /* Midi Stuff */,
 				716B3B7F1F65994B00AADA1A /* AppDelegate.swift */,
 				716B3B811F65994B00AADA1A /* ViewController.swift */,
 				716B3B831F65994B00AADA1A /* Main.storyboard */,
@@ -125,6 +161,32 @@
 			path = MicrotonalUITests;
 			sourceTree = "<group>";
 		};
+		716B3BAD1F659A9F00AADA1A /* Midi Stuff */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Midi Stuff";
+			sourceTree = "<group>";
+		};
+		716B3BAE1F659B2200AADA1A /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				716B3BAF1F659CB500AADA1A /* Keyboard.xib */,
+				716B3BB11F65A13100AADA1A /* Keyboard.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		98B217592E3B44A9DE335BF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */,
+				899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */,
+				C86E16B596914AA97EF3D39A /* Pods_MicrotonalUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716B3BA41F65994B00AADA1A /* Build configuration list for PBXNativeTarget "Microtonal" */;
 			buildPhases = (
+				07BD66BAB5BF563899DD6AEF /* [CP] Check Pods Manifest.lock */,
 				716B3B781F65994B00AADA1A /* Sources */,
 				716B3B791F65994B00AADA1A /* Frameworks */,
 				716B3B7A1F65994B00AADA1A /* Resources */,
+				DA23D4D0B5E8131B227EFAC8 /* [CP] Embed Pods Frameworks */,
+				A59E263C8C62D686227AEB09 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716B3BA71F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalTests" */;
 			buildPhases = (
+				55961E05B98617C61803BC65 /* [CP] Check Pods Manifest.lock */,
 				716B3B8C1F65994B00AADA1A /* Sources */,
 				716B3B8D1F65994B00AADA1A /* Frameworks */,
 				716B3B8E1F65994B00AADA1A /* Resources */,
+				8ECDBA0631154CEFA72CEBA6 /* [CP] Embed Pods Frameworks */,
+				3A3C999732AA6143D0390BAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716B3BAA1F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalUITests" */;
 			buildPhases = (
+				B8EFCBB3BD4ED63E23F9D4BE /* [CP] Check Pods Manifest.lock */,
 				716B3B971F65994B00AADA1A /* Sources */,
 				716B3B981F65994B00AADA1A /* Frameworks */,
 				716B3B991F65994B00AADA1A /* Resources */,
+				6F99D82CDDC084683698250C /* [CP] Embed Pods Frameworks */,
+				0BF9B1665A7C5510F9B5354C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +308,7 @@
 			files = (
 				716B3B8A1F65994B00AADA1A /* LaunchScreen.storyboard in Resources */,
 				716B3B871F65994B00AADA1A /* Assets.xcassets in Resources */,
+				716B3BB01F659CB500AADA1A /* Keyboard.xib in Resources */,
 				716B3B851F65994B00AADA1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,12 +329,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07BD66BAB5BF563899DD6AEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0BF9B1665A7C5510F9B5354C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A3C999732AA6143D0390BAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55961E05B98617C61803BC65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F99D82CDDC084683698250C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ECDBA0631154CEFA72CEBA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A59E263C8C62D686227AEB09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Microtonal/Pods-Microtonal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8EFCBB3BD4ED63E23F9D4BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA23D4D0B5E8131B227EFAC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Microtonal/Pods-Microtonal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		716B3B781F65994B00AADA1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				716B3B821F65994B00AADA1A /* ViewController.swift in Sources */,
+				716B3BB21F65A13100AADA1A /* Keyboard.swift in Sources */,
 				716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +626,7 @@
 		};
 		716B3BA51F65994B00AADA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44CCB917C729CDE9D029E47 /* Pods-Microtonal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S422Q897FZ;
@@ -428,6 +640,7 @@
 		};
 		716B3BA61F65994B00AADA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D347DCD335E486B8F241ADF /* Pods-Microtonal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S422Q897FZ;
@@ -441,6 +654,7 @@
 		};
 		716B3BA81F65994B00AADA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19237B1C4D5A2EAA75592C51 /* Pods-MicrotonalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +670,7 @@
 		};
 		716B3BA91F65994B00AADA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F38548DBD3C255141FC5F45 /* Pods-MicrotonalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +686,7 @@
 		};
 		716B3BAB1F65994B00AADA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26F62EA494CBB65DACE4BD7 /* Pods-MicrotonalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = S422Q897FZ;
@@ -485,6 +701,7 @@
 		};
 		716B3BAC1F65994B00AADA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDC929FE8AA5E38FAC709D1 /* Pods-MicrotonalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = S422Q897FZ;
@@ -516,6 +733,7 @@
 				716B3BA61F65994B00AADA1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		716B3BA71F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +742,7 @@
 				716B3BA91F65994B00AADA1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		716B3BAA1F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +751,7 @@
 				716B3BAC1F65994B00AADA1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

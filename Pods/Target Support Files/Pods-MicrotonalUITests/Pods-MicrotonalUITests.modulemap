@@ -1,0 +1,6 @@
+framework module Pods_MicrotonalUITests {
+  umbrella header "Pods-MicrotonalUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
