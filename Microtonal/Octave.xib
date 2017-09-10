@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Keyboard" customModule="Microtonal" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Octave" customModule="Microtonal" customModuleProvider="target">
             <connections>
                 <outletCollection property="keys" destination="4Ox-GC-NG2" collectionClass="NSMutableArray" id="OBy-yT-Uyb"/>
                 <outletCollection property="keys" destination="NrT-pL-vHC" collectionClass="NSMutableArray" id="u0R-rT-eso"/>
@@ -32,11 +32,11 @@
             <rect key="frame" x="0.0" y="0.0" width="455" height="322"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-uF-Hjx">
-                    <rect key="frame" x="0.0" y="0.0" width="455" height="322"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-uF-Hjx">
+                    <rect key="frame" x="2.5" y="0.0" width="450" height="322"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ox-GC-NG2" userLabel="C" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -45,7 +45,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ua-SX-qZp" userLabel="D" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="66.5" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="65" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -54,7 +54,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M4-bx-EGV" userLabel="E" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="133" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="130" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -63,7 +63,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rB-WL-hmV" userLabel="F" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="199.5" y="0.0" width="56" height="322"/>
+                            <rect key="frame" x="195" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -72,7 +72,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gy-2r-TVN" userLabel="G" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="265.5" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="260" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -81,7 +81,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZH6-q9-zC5" userLabel="A" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="332" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="325" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -90,7 +90,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-aH-hEA" userLabel="B" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                            <rect key="frame" x="398.5" y="0.0" width="56.5" height="322"/>
+                            <rect key="frame" x="390" y="0.0" width="60" height="322"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="key">
@@ -101,57 +101,52 @@
                     </subviews>
                 </stackView>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-pL-vHC" userLabel="C#" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                    <rect key="frame" x="28" y="0.0" width="49" height="214.5"/>
+                    <rect key="frame" x="32.5" y="0.0" width="52" height="214.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBlack" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="key">
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0m-sG-o5W" userLabel="D#" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                    <rect key="frame" x="112" y="0.0" width="49" height="214.5"/>
+                    <rect key="frame" x="110" y="0.0" width="52.5" height="214.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBlack" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="key">
                             <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-tC-Bgm" userLabel="F#" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                    <rect key="frame" x="227.5" y="0.0" width="49" height="214.5"/>
+                    <rect key="frame" x="228" y="0.0" width="52.5" height="214.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBlack" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="key">
                             <integer key="value" value="6"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-7m-q0G" userLabel="G#" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                    <rect key="frame" x="301" y="0.0" width="49.5" height="214.5"/>
+                    <rect key="frame" x="300" y="0.0" width="52" height="214.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBlack" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="key">
                             <integer key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTJ-JN-3j7" userLabel="A#" customClass="Key" customModule="Microtonal" customModuleProvider="target">
-                    <rect key="frame" x="378.5" y="0.0" width="48.5" height="214.5"/>
+                    <rect key="frame" x="370" y="0.0" width="52.5" height="214.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBlack" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="key">
                             <integer key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.60215313420000005" blue="0.1713277268" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Ygc-tC-Bgm" firstAttribute="width" secondItem="M0m-sG-o5W" secondAttribute="width" id="5Q9-Cg-VJB"/>
                 <constraint firstItem="M0m-sG-o5W" firstAttribute="top" secondItem="NrT-pL-vHC" secondAttribute="top" id="60T-ZV-p0i"/>
@@ -163,7 +158,7 @@
                 <constraint firstItem="tTJ-JN-3j7" firstAttribute="height" secondItem="NrT-pL-vHC" secondAttribute="height" id="Ij1-ov-Kcb"/>
                 <constraint firstItem="YNO-7m-q0G" firstAttribute="top" secondItem="NrT-pL-vHC" secondAttribute="top" id="J2C-1E-dMo"/>
                 <constraint firstItem="6M4-bx-EGV" firstAttribute="centerX" secondItem="M0m-sG-o5W" secondAttribute="trailing" id="PJ2-Gd-0N4"/>
-                <constraint firstItem="AU5-uF-Hjx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qbd-pl-khN"/>
+                <constraint firstItem="AU5-uF-Hjx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="Qbd-pl-khN"/>
                 <constraint firstItem="NrT-pL-vHC" firstAttribute="width" secondItem="4Ox-GC-NG2" secondAttribute="width" multiplier="1/1.15" id="U5F-PD-vgj"/>
                 <constraint firstItem="tTJ-JN-3j7" firstAttribute="width" secondItem="NrT-pL-vHC" secondAttribute="width" id="V1B-DG-raK"/>
                 <constraint firstItem="YNO-7m-q0G" firstAttribute="width" secondItem="NrT-pL-vHC" secondAttribute="width" id="V4H-H4-LCI"/>
@@ -174,7 +169,7 @@
                 <constraint firstItem="M0m-sG-o5W" firstAttribute="height" secondItem="NrT-pL-vHC" secondAttribute="height" id="mWx-kS-g2e"/>
                 <constraint firstItem="Ygc-tC-Bgm" firstAttribute="top" secondItem="M0m-sG-o5W" secondAttribute="top" id="qAf-cO-vTq"/>
                 <constraint firstItem="NrT-pL-vHC" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1/1.5" id="rAj-tS-c4K"/>
-                <constraint firstAttribute="trailing" secondItem="AU5-uF-Hjx" secondAttribute="trailing" id="rUd-cy-v9v"/>
+                <constraint firstAttribute="trailing" secondItem="AU5-uF-Hjx" secondAttribute="trailing" constant="2" id="rUd-cy-v9v"/>
                 <constraint firstItem="Ygc-tC-Bgm" firstAttribute="height" secondItem="M0m-sG-o5W" secondAttribute="height" id="sdX-fi-PVe"/>
                 <constraint firstItem="NrT-pL-vHC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uho-Pp-Z9H"/>
             </constraints>

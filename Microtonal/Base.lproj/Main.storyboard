@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +19,111 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-GD-wel" userLabel="Keyboard" customClass="AKKeyboardView" customModule="AudioKit">
+                                <rect key="frame" x="0.0" y="192" width="568" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-DL-Nah">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="184"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EAE-Yn-o2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="184"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-2L-BBW">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="184"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-3y-BFY" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGH-sH-rGy" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="63" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZH-yg-hs3" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="126" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-ww-dj7">
+                                                <rect key="frame" x="192.5" y="0.0" width="183" height="184"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-1K-0qe" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4I-CN-R9r" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="63" width="183" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yu9-cv-MsI" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="126" width="183" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CiW-Ys-oUL">
+                                                <rect key="frame" x="385.5" y="0.0" width="182.5" height="184"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-8d-Dce" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-Da-57I" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="63" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoX-Pj-VzI" customClass="AKPropertySlider" customModule="AudioKit">
+                                                        <rect key="frame" x="0.0" y="126" width="182.5" height="58"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EAE-Yn-o2x" secondAttribute="bottom" id="D0e-K5-YQH"/>
+                                    <constraint firstItem="EAE-Yn-o2x" firstAttribute="top" secondItem="i5H-DL-Nah" secondAttribute="top" id="TYY-ja-Y4f"/>
+                                    <constraint firstItem="EAE-Yn-o2x" firstAttribute="leading" secondItem="i5H-DL-Nah" secondAttribute="leading" id="c3e-PM-FBO"/>
+                                    <constraint firstAttribute="trailing" secondItem="EAE-Yn-o2x" secondAttribute="trailing" id="dre-zl-Ros"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22089540155440412" green="0.02661669141623367" blue="0.015908159069004696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="i5H-DL-Nah" firstAttribute="leading" secondItem="EXW-GD-wel" secondAttribute="leading" id="0oh-uk-FYd"/>
+                            <constraint firstItem="i5H-DL-Nah" firstAttribute="trailing" secondItem="EXW-GD-wel" secondAttribute="trailing" id="620-vQ-L5x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EXW-GD-wel" secondAttribute="bottom" id="ECN-IC-tF8"/>
+                            <constraint firstItem="EXW-GD-wel" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FqF-Wb-40q"/>
+                            <constraint firstItem="EXW-GD-wel" firstAttribute="top" secondItem="i5H-DL-Nah" secondAttribute="bottom" constant="8" symbolic="YES" id="KTO-m3-iK8"/>
+                            <constraint firstAttribute="trailing" secondItem="EXW-GD-wel" secondAttribute="trailing" id="LMU-4G-oaC"/>
+                            <constraint firstItem="EXW-GD-wel" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="nX6-F4-WG1"/>
+                            <constraint firstItem="i5H-DL-Nah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qR3-l0-yit"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="keyboard" destination="EXW-GD-wel" id="4UU-L6-PTQ"/>
+                        <outletCollection property="sliders" destination="JQD-3y-BFY" collectionClass="NSMutableArray" id="woi-am-kmb"/>
+                        <outletCollection property="sliders" destination="PGH-sH-rGy" collectionClass="NSMutableArray" id="KCh-ca-J7t"/>
+                        <outletCollection property="sliders" destination="ZZH-yg-hs3" collectionClass="NSMutableArray" id="oGv-wp-LHS"/>
+                        <outletCollection property="sliders" destination="hVh-1K-0qe" collectionClass="NSMutableArray" id="cnJ-n8-57g"/>
+                        <outletCollection property="sliders" destination="R4I-CN-R9r" collectionClass="NSMutableArray" id="7Np-Lq-ZPh"/>
+                        <outletCollection property="sliders" destination="Yu9-cv-MsI" collectionClass="NSMutableArray" id="rIT-LR-9xf"/>
+                        <outletCollection property="sliders" destination="Nw2-8d-Dce" collectionClass="NSMutableArray" id="Cyn-Lk-j58"/>
+                        <outletCollection property="sliders" destination="cJP-Da-57I" collectionClass="NSMutableArray" id="Gv6-NC-TFb"/>
+                        <outletCollection property="sliders" destination="VoX-Pj-VzI" collectionClass="NSMutableArray" id="Qt0-ea-zAw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.802816901408448" y="39.375"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.66391160501848401" green="0.93662969559585496" blue="0.0076054686827753586" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
