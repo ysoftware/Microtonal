@@ -10,7 +10,9 @@
 
 /*
  
- http://ysoftware.ru/scale/scl/efg333.scl
+ 
+ 
+ 
  
  */
 
@@ -19,8 +21,41 @@ import AudioKit
 
 class ViewController: UIViewController, AKKeyboardDelegate {
     
-    @IBOutlet var sliders: [AKPropertySlider]!
+    let tunings = [
+        "efg333.scl",
+        "tranh.scl",
+        "harmd-15.scl",
+        "11-19-mclaren.scl",
+        "clipper100.scl",
+        ""
+    ]
     
+    @IBAction func panic(_ sender: Any) {
+        AudioKit.stop()
+        AudioKit.start()
+    }
+    
+    @IBAction func nextTuning(_ sender: Any) {
+        if let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/" + tunings.randomElement()) {
+            sound.tunings = tunings.frequencies
+            tuningLabel.text = tunings.description
+        }
+        else {
+            tuningLabel.text = "no tuning"
+            sound.tunings = []
+        }
+    }
+    
+    @IBAction func higherOctave(_ sender: Any) {
+        keyboard.firstOctave += 1
+    }
+    
+    @IBAction func lowerOctave(_ sender: Any) {
+        keyboard.firstOctave -= 1
+    }
+    
+    @IBOutlet var sliders: [AKPropertySlider]!
+    @IBOutlet weak var tuningLabel: UILabel!
     @IBOutlet weak var keyboard: AKKeyboardView!
     
     // MARK: - Actions
@@ -36,43 +71,20 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         
         keyboard.delegate = self
         keyboard.polyphonicMode = true
-        keyboard.firstOctave = 4
-        keyboard.octaveCount = 1
+        keyboard.firstOctave = 3
+        keyboard.octaveCount = 2
         
         sound.setup()
         setupActions()
-        
-        let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/tranh.scl")
-        print(tunings!.description)
-        tunings!.frequencies.forEach { print($0) }
-        sound.tunings = tunings?.frequencies
     }
     
     func setupActions() {
-//        sliders[0].setup(min: 340, max: 540, name: "A4") { self.sound.a = $0 }
-        sliders[1].setup(min: 0, max: 1, name: "Delay mix") { self.sound.delay.dryWetMix = $0 }
-        sliders[2].setup(min: 0, max: 3, name: "Delay Time") { self.sound.delay.time = $0 }
-        
-        sliders[3].setup(min: 0, max: 10, name: "Osc Ramp") { self.sound.osc.rampTime = $0 }
-        sliders[4].setup(min: 0, max: 1, name: "Reverb mix") { self.sound.reverb.dryWetMix = $0 }
-        sliders[5].setup(min: 0, max: 4, name: "Waveform") { val in
-            let waveForm: AKTableType
-            switch val {
-            case 0..<1: waveForm = .sine
-            case 1..<2: waveForm = .triangle
-            case 2..<3: waveForm = .square
-            case 3..<4: waveForm = .sawtooth
-            default: return
-            }
-            self.sound.osc.waveform = AKTable(waveForm, phase: 0, count: 0)
-            AudioKit.stop()
-            AudioKit.start()
-        }
-        
-        sliders[6].setup(min: 0.1, max: 3, name: "Release") { self.sound.osc.releaseDuration = $0 }
-        sliders[7].setup(min: 0.1, max: 3, name: "Attack") { self.sound.osc.attackDuration = $0 }
-//        sliders[8].setup(min: 0, max: 3, name: "Release") { self.sound.envelope.releaseDuration = $0 }
-        
+        sliders[0].setup(min: 0, max: 1, name: "D.Mix") { self.sound.delay.dryWetMix = $0 }
+        sliders[1].setup(min: 0, max: 3, name: "D.Time") { self.sound.delay.time = $0 }
+        sliders[2].setup(min: 0, max: 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
+        sliders[3].setup(min: 0.1, max: 2, name: "Rel") { self.sound.osc.releaseDuration = $0 }
+        sliders[4].setup(min: 0.1, max: 2, name: "Atk") { self.sound.osc.attackDuration = $0 }
+        sliders[5].setup(min: 0, max: 13, name: "Volume") { self.sound.booster.gain = $0 }
     }
     
     func noteOn(note: MIDINoteNumber) {

@@ -66,21 +66,48 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CiW-Ys-oUL">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-3V-3fF">
                                                 <rect key="frame" x="385.5" y="0.0" width="182.5" height="184"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-8d-Dce" customClass="AKPropertySlider" customModule="AudioKit">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="58"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-Da-57I" customClass="AKPropertySlider" customModule="AudioKit">
-                                                        <rect key="frame" x="0.0" y="63" width="182.5" height="58"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoX-Pj-VzI" customClass="AKPropertySlider" customModule="AudioKit">
-                                                        <rect key="frame" x="0.0" y="126" width="182.5" height="58"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-R2-0uk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4hE-0g-Acg">
+                                                        <rect key="frame" x="0.0" y="34" width="182.5" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQw-GR-ura">
+                                                                <rect key="frame" x="0.0" y="0.0" width="91" height="50"/>
+                                                                <state key="normal" title="&lt;"/>
+                                                                <connections>
+                                                                    <action selector="lowerOctave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E9v-ZF-Oaj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-qq-Y2A">
+                                                                <rect key="frame" x="91" y="0.0" width="91.5" height="50"/>
+                                                                <state key="normal" title="&gt;"/>
+                                                                <connections>
+                                                                    <action selector="higherOctave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGf-ne-ntd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-ts-GfR">
+                                                        <rect key="frame" x="0.0" y="84" width="182.5" height="50"/>
+                                                        <state key="normal" title="Next Tuning"/>
+                                                        <connections>
+                                                            <action selector="nextTuning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gj-Qm-Gep"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-YQ-qk2">
+                                                        <rect key="frame" x="0.0" y="134" width="182.5" height="50"/>
+                                                        <state key="normal" title="Panic!"/>
+                                                        <connections>
+                                                            <action selector="panic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sad-y3-WEK"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -91,7 +118,7 @@
                                     <constraint firstAttribute="bottom" secondItem="EAE-Yn-o2x" secondAttribute="bottom" id="D0e-K5-YQH"/>
                                     <constraint firstItem="EAE-Yn-o2x" firstAttribute="top" secondItem="i5H-DL-Nah" secondAttribute="top" id="TYY-ja-Y4f"/>
                                     <constraint firstItem="EAE-Yn-o2x" firstAttribute="leading" secondItem="i5H-DL-Nah" secondAttribute="leading" id="c3e-PM-FBO"/>
-                                    <constraint firstAttribute="trailing" secondItem="EAE-Yn-o2x" secondAttribute="trailing" id="dre-zl-Ros"/>
+                                    <constraint firstItem="EAE-Yn-o2x" firstAttribute="width" secondItem="i5H-DL-Nah" secondAttribute="width" id="jSI-6x-sUy"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -109,15 +136,13 @@
                     </view>
                     <connections>
                         <outlet property="keyboard" destination="EXW-GD-wel" id="4UU-L6-PTQ"/>
+                        <outlet property="tuningLabel" destination="ggb-R2-0uk" id="goD-LN-aKX"/>
                         <outletCollection property="sliders" destination="JQD-3y-BFY" collectionClass="NSMutableArray" id="woi-am-kmb"/>
                         <outletCollection property="sliders" destination="PGH-sH-rGy" collectionClass="NSMutableArray" id="KCh-ca-J7t"/>
                         <outletCollection property="sliders" destination="ZZH-yg-hs3" collectionClass="NSMutableArray" id="oGv-wp-LHS"/>
                         <outletCollection property="sliders" destination="hVh-1K-0qe" collectionClass="NSMutableArray" id="cnJ-n8-57g"/>
                         <outletCollection property="sliders" destination="R4I-CN-R9r" collectionClass="NSMutableArray" id="7Np-Lq-ZPh"/>
                         <outletCollection property="sliders" destination="Yu9-cv-MsI" collectionClass="NSMutableArray" id="rIT-LR-9xf"/>
-                        <outletCollection property="sliders" destination="Nw2-8d-Dce" collectionClass="NSMutableArray" id="Cyn-Lk-j58"/>
-                        <outletCollection property="sliders" destination="cJP-Da-57I" collectionClass="NSMutableArray" id="Gv6-NC-TFb"/>
-                        <outletCollection property="sliders" destination="VoX-Pj-VzI" collectionClass="NSMutableArray" id="Qt0-ea-zAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

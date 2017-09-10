@@ -15,6 +15,8 @@ final class Sound {
     var osc:AKOscillatorBank!
     var delay:AKDelay!
     var reverb:AKReverb!
+    var bitcrusher:AKBitCrusher!
+    var booster:AKBooster!
     
     var a:Double = 440
     
@@ -30,7 +32,11 @@ final class Sound {
         delay.dryWetMix = 0
         delay.time = 0.5
         
-        AudioKit.output = AKBooster(delay, gain: 10)
+//        bitcrusher = AKBitCrusher(delay, bitDepth: 24, sampleRate: 40000)
+        
+        booster = AKBooster(delay, gain: 5)
+        
+        AudioKit.output = booster
         AudioKit.start()
     }
     

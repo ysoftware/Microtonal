@@ -37,19 +37,25 @@ func parseScl(from scala:String) -> TuningsInfo? {
                 if line.match("^.*\\.") {
                     guard let centsString = line.replace("\\sg", ""),
                         let cents = Double(centsString)
-                        else { return failed = true }
+                        else {
+                            return failed = true
+                    }
                     tunings.append(pow(2, cents / 1200))
                 }
                 else if line.match("[0-9]\\/[0-9]") {
                     let ratios = line.components(separatedBy: "/")
                     guard ratios.count == 2,
                         let ratio1 = Double(ratios[0]), let ratio2 = Double(ratios[1])
-                        else { return failed = true }
+                        else {
+                            return failed = true
+                    }
                     tunings.append(ratio1 / ratio2)
                 }
                 else {
                     guard let value = Double(line)
-                        else { return failed = true }
+                        else {
+                            return failed = true
+                    }
                     tunings.append(value)
                 }
             }
@@ -77,8 +83,11 @@ func tuningToFrequencies(_ tunings:[Double]) -> [Double] {
         }
         frequency = max(0.0, min(22050.0, frequency))
         frequencies.append(frequency)
+        
+        print(octave)
+        print(degree)
     }
-    return frequencies
+    return frequencies.sorted()
 }
 
 extension String {
