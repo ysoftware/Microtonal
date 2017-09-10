@@ -17,7 +17,9 @@
 		716B3B951F65994B00AADA1A /* MicrotonalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B941F65994B00AADA1A /* MicrotonalTests.swift */; };
 		716B3BA01F65994B00AADA1A /* MicrotonalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */; };
 		716B3BB01F659CB500AADA1A /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716B3BAF1F659CB500AADA1A /* Keyboard.xib */; };
-		716B3BB21F65A13100AADA1A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB11F65A13100AADA1A /* Keyboard.swift */; };
+		716B3BB21F65A13100AADA1A /* Octave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB11F65A13100AADA1A /* Octave.swift */; };
+		716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB31F65A2C800AADA1A /* Extensions.swift */; };
+		716B3BB61F65A48900AADA1A /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB51F65A48900AADA1A /* Key.swift */; };
 		D0989AF7EDF35AEC5B879CEF /* Pods_MicrotonalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +59,9 @@
 		716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrotonalUITests.swift; sourceTree = "<group>"; };
 		716B3BA11F65994B00AADA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716B3BAF1F659CB500AADA1A /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
-		716B3BB11F65A13100AADA1A /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		716B3BB11F65A13100AADA1A /* Octave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Octave.swift; sourceTree = "<group>"; };
+		716B3BB31F65A2C800AADA1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		716B3BB51F65A48900AADA1A /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrotonalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F38548DBD3C255141FC5F45 /* Pods-MicrotonalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests.release.xcconfig"; sourceTree = "<group>"; };
 		C86E16B596914AA97EF3D39A /* Pods_MicrotonalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrotonalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,7 @@
 				716B3B831F65994B00AADA1A /* Main.storyboard */,
 				716B3B861F65994B00AADA1A /* Assets.xcassets */,
 				716B3B881F65994B00AADA1A /* LaunchScreen.storyboard */,
+				716B3BB31F65A2C800AADA1A /* Extensions.swift */,
 				716B3B8B1F65994B00AADA1A /* Info.plist */,
 			);
 			path = Microtonal;
@@ -172,7 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				716B3BAF1F659CB500AADA1A /* Keyboard.xib */,
-				716B3BB11F65A13100AADA1A /* Keyboard.swift */,
+				716B3BB11F65A13100AADA1A /* Octave.swift */,
+				716B3BB51F65A48900AADA1A /* Key.swift */,
 			);
 			name = Keyboard;
 			sourceTree = "<group>";
@@ -473,8 +479,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				716B3B821F65994B00AADA1A /* ViewController.swift in Sources */,
-				716B3BB21F65A13100AADA1A /* Keyboard.swift in Sources */,
+				716B3BB61F65A48900AADA1A /* Key.swift in Sources */,
+				716B3BB21F65A13100AADA1A /* Octave.swift in Sources */,
 				716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */,
+				716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
