@@ -22,12 +22,18 @@ import AudioKit
 class ViewController: UIViewController, AKKeyboardDelegate {
     
     let tunings = [
+        "",
         "efg333.scl",
         "tranh.scl",
         "harmd-15.scl",
         "11-19-mclaren.scl",
         "clipper100.scl",
-        ""
+        "husmann.scl",
+        "indian-srutivina.scl",
+        "indra31.scl",
+        "indian_d.scl",
+        "kellners.scl",
+        "kirnberger48.scl"
     ]
     
     @IBAction func panic(_ sender: Any) {
@@ -36,13 +42,17 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     }
     
     @IBAction func nextTuning(_ sender: Any) {
-        if let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/" + tunings.randomElement()) {
+        currentTuning += 1
+        if  currentTuning >= tunings.count {
+            currentTuning = 0
+        }
+        if let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/" + tunings[currentTuning]) {
             sound.tunings = tunings.frequencies
             tuningLabel.text = tunings.description
         }
         else {
             tuningLabel.text = "no tuning"
-            sound.tunings = []
+            sound.tunings = nil
         }
     }
     
@@ -62,6 +72,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     
     // MARK: - Properties
     
+    var currentTuning = 0
     let sound = Sound()
     
     // MARK: - ViewController
@@ -79,12 +90,12 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     }
     
     func setupActions() {
-        sliders[0].setup(min: 0, max: 1, name: "D.Mix") { self.sound.delay.dryWetMix = $0 }
-        sliders[1].setup(min: 0, max: 3, name: "D.Time") { self.sound.delay.time = $0 }
-        sliders[2].setup(min: 0, max: 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
-        sliders[3].setup(min: 0.1, max: 2, name: "Rel") { self.sound.osc.releaseDuration = $0 }
-        sliders[4].setup(min: 0.1, max: 2, name: "Atk") { self.sound.osc.attackDuration = $0 }
-        sliders[5].setup(min: 0, max: 13, name: "Volume") { self.sound.booster.gain = $0 }
+        sliders[0].setup(0, 0, 1, name: "D.Mix") { self.sound.delay.dryWetMix = $0 }
+        sliders[1].setup(0.5, 0, 5, name: "D.Time") { self.sound.delay.time = $0 }
+        sliders[2].setup(0, 0, 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
+        sliders[3].setup(0.1, 0.1, 1, name: "Rel") { self.sound.osc.releaseDuration = $0 }
+        sliders[4].setup(0.1, 0.1, 3, name: "Atk") { self.sound.osc.attackDuration = $0 }
+        sliders[5].setup(5, 0, 15, name: "Volume") { self.sound.booster.gain = $0 }
     }
     
     func noteOn(note: MIDINoteNumber) {
@@ -97,11 +108,15 @@ class ViewController: UIViewController, AKKeyboardDelegate {
 }
 
 extension AKPropertySlider {
-    func setup(min:Double, max:Double, name:String, _ callback: @escaping (Double)->Void) {
+    func setup(_ value:Double, _ min:Double, _ max:Double, name:String, _ callback: @escaping (Double)->Void) {
+        self.value = value
         self.minimum = min
         self.maximum = max
         self.property = name
         self.callback = callback
+        self.bgColor = .gray
+        self.bgColor = .white
+        self.callback(value)
     }
 }
 

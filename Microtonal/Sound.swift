@@ -32,8 +32,6 @@ final class Sound {
         delay.dryWetMix = 0
         delay.time = 0.5
         
-//        bitcrusher = AKBitCrusher(delay, bitDepth: 24, sampleRate: 40000)
-        
         booster = AKBooster(delay, gain: 5)
         
         AudioKit.output = booster
@@ -41,7 +39,7 @@ final class Sound {
     }
     
     func play(note:MIDINoteNumber) {
-        if let freqs = tunings {
+        if let freqs = tunings, freqs.count >= 128 {
             osc.play(noteNumber: note, velocity: 80, frequency: freqs[Int(note)])
         }
         else {
