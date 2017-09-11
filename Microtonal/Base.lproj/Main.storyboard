@@ -29,7 +29,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-DL-Nah">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="184"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="no tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-R2-0uk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="No tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-R2-0uk">
                                         <rect key="frame" x="0.0" y="5" width="568" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -139,7 +139,7 @@
                     </view>
                     <connections>
                         <outlet property="keyboard" destination="EXW-GD-wel" id="4UU-L6-PTQ"/>
-                        <outlet property="tuningLabel" destination="ggb-R2-0uk" id="goD-LN-aKX"/>
+                        <outlet property="label" destination="ggb-R2-0uk" id="xKp-ST-rzR"/>
                         <outletCollection property="sliders" destination="JQD-3y-BFY" collectionClass="NSMutableArray" id="woi-am-kmb"/>
                         <outletCollection property="sliders" destination="PGH-sH-rGy" collectionClass="NSMutableArray" id="KCh-ca-J7t"/>
                         <outletCollection property="sliders" destination="ZZH-yg-hs3" collectionClass="NSMutableArray" id="oGv-wp-LHS"/>

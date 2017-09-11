@@ -39,6 +39,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     @IBAction func panic(_ sender: Any) {
         AudioKit.stop()
         AudioKit.start()
+        label.text = "Audio restarted"
     }
     
     @IBAction func nextTuning(_ sender: Any) {
@@ -48,24 +49,26 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
         if let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/" + tunings[currentTuning]) {
             sound.tunings = tunings.frequencies
-            tuningLabel.text = tunings.description
+            label.text = tunings.description
         }
         else {
-            tuningLabel.text = "no tuning"
+            label.text = "No tuning"
             sound.tunings = nil
         }
     }
     
     @IBAction func higherOctave(_ sender: Any) {
         keyboard.firstOctave += 1
+        label.text = "Octave \(keyboard.firstOctave)"
     }
     
     @IBAction func lowerOctave(_ sender: Any) {
         keyboard.firstOctave -= 1
+        label.text = "Octave \(keyboard.firstOctave)"
     }
     
     @IBOutlet var sliders: [AKPropertySlider]!
-    @IBOutlet weak var tuningLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var keyboard: AKKeyboardView!
     
     // MARK: - Actions
@@ -116,7 +119,7 @@ extension AKPropertySlider {
         self.callback = callback
         self.bgColor = .gray
         self.bgColor = .white
-        self.callback(value)
+        self.callback?(value)
     }
 }
 
