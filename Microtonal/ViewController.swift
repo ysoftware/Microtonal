@@ -29,11 +29,18 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         "11-19-mclaren.scl",
         "clipper100.scl",
         "husmann.scl",
-        "indian-srutivina.scl",
+        "indian-srutivina.scl", // error
         "indra31.scl",
         "indian_d.scl",
         "kellners.scl",
-        "kirnberger48.scl"
+        "kirnberger48.scl",
+        "ligon10.scl",
+        "lucy_31.scl",
+        "marpurg.scl",
+        "mean2nine.scl",
+        "pipedum_72b2.scl",
+        "savas_diat.scl",
+        "serafini-11.scl"
     ]
     
     @IBAction func panic(_ sender: Any) {

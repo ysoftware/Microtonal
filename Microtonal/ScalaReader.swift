@@ -12,7 +12,10 @@ typealias TuningsInfo = (description:String, frequencies:[Double])
 
 func getTunings(from url:String) -> TuningsInfo? {
     guard let url = URL(string: url),
-        let string = readFile(url) else { return nil }
+        let string = readFile(url) else {
+            print("Error 0: url not found")
+            return nil
+    }
     return parseScl(from: string)
 }
 
@@ -38,6 +41,7 @@ func parseScl(from scala:String) -> TuningsInfo? {
                     guard let centsString = line.replace("\\sg", ""),
                         let cents = Double(centsString)
                         else {
+                            print("Error 1 in line \(line)")
                             return failed = true
                     }
                     tunings.append(pow(2, cents / 1200))
@@ -47,6 +51,7 @@ func parseScl(from scala:String) -> TuningsInfo? {
                     guard ratios.count == 2,
                         let ratio1 = Double(ratios[0]), let ratio2 = Double(ratios[1])
                         else {
+                            print("Error 2 in line \(line)")
                             return failed = true
                     }
                     tunings.append(ratio1 / ratio2)
@@ -54,6 +59,7 @@ func parseScl(from scala:String) -> TuningsInfo? {
                 else {
                     guard let value = Double(line)
                         else {
+                            print("Error 3 in line \(line)")
                             return failed = true
                     }
                     tunings.append(value)
@@ -83,9 +89,6 @@ func tuningToFrequencies(_ tunings:[Double]) -> [Double] {
         }
         frequency = max(0.0, min(22050.0, frequency))
         frequencies.append(frequency)
-        
-        print(octave)
-        print(degree)
     }
     return frequencies.sorted()
 }
