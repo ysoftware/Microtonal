@@ -38,7 +38,10 @@ func parseScl(from scala:String) -> TuningsInfo? {
             if counter == 1 { description = line }
             if counter > 2 {
                 if line.match("^.*\\.") {
-                    guard let centsString = line.replace("\\sg", ""),
+                    guard
+                        let centsString = line.replace("\\sg", "")?
+                            .replace("cents", "")?
+                            .trimmingCharacters(in: .whitespaces),
                         let cents = Double(centsString)
                         else {
                             print("Error 1 in line \(line)")

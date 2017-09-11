@@ -7,17 +7,10 @@
 //
 
 
-
-/*
- 
- 
- 
- 
- 
- */
-
 import UIKit
 import AudioKit
+
+fileprivate let BASEURL = "http://ysoftware.ru/scale/scl/"
 
 class ViewController: UIViewController, AKKeyboardDelegate {
     
@@ -37,11 +30,34 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         "ligon10.scl",
         "lucy_31.scl",
         "marpurg.scl",
-        "mean2nine.scl",
         "pipedum_72b2.scl",
         "savas_diat.scl",
         "serafini-11.scl"
     ]
+    
+    @IBAction func loadTuning(_ sender: Any) {
+        let alert = UIAlertController(title: "Load a tuning",
+                                      message: "Name or url of an .scl file.",
+                                      preferredStyle: .alert)
+        alert.addTextField ()
+        
+        alert.addAction(UIAlertAction(title: "Load", style: .default, handler: { [weak alert] (_) in
+            guard let a = alert, let url = a.textFields![0].text else { return }
+            
+            if url.contains("http") {
+                self.loadTuning(from: url)
+            }
+            else if url.contains(".scl") {
+                self.loadTuning(from: BASEURL + url)
+            }
+            else {
+                self.loadTuning(from: BASEURL + url + ".scl")
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func panic(_ sender: Any) {
         AudioKit.stop()
@@ -54,24 +70,21 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         if  currentTuning >= tunings.count {
             currentTuning = 0
         }
-        if let tunings = getTunings(from: "http://ysoftware.ru/scale/scl/" + tunings[currentTuning]) {
-            sound.tunings = tunings.frequencies
-            label.text = tunings.description
-        }
-        else {
-            label.text = "No tuning"
-            sound.tunings = nil
-        }
+        loadTuning(from: BASEURL + tunings[currentTuning])
     }
     
     @IBAction func higherOctave(_ sender: Any) {
-        keyboard.firstOctave += 1
-        label.text = "Octave \(keyboard.firstOctave)"
+        if keyboard.firstOctave < 8 {
+            keyboard.firstOctave += 1
+            label.text = "Octaves \(keyboard.firstOctave), \(keyboard.firstOctave+1)"
+        }
     }
     
     @IBAction func lowerOctave(_ sender: Any) {
-        keyboard.firstOctave -= 1
-        label.text = "Octave \(keyboard.firstOctave)"
+        if keyboard.firstOctave > 0 {
+            keyboard.firstOctave -= 1
+            label.text = "Octaves \(keyboard.firstOctave), \(keyboard.firstOctave+1)"
+        }
     }
     
     @IBOutlet var sliders: [AKPropertySlider]!
@@ -99,13 +112,24 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         setupActions()
     }
     
+    func loadTuning(from url:String) {
+        if let tunings = getTunings(from: url) {
+            sound.tunings = tunings.frequencies
+            label.text = tunings.description
+        }
+        else {
+            label.text = "No tuning"
+            sound.tunings = nil
+        }
+    }
+    
     func setupActions() {
         sliders[0].setup(0, 0, 1, name: "D.Mix") { self.sound.delay.dryWetMix = $0 }
         sliders[1].setup(0.5, 0, 5, name: "D.Time") { self.sound.delay.time = $0 }
         sliders[2].setup(0, 0, 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
-        sliders[3].setup(0.1, 0.1, 1, name: "Rel") { self.sound.osc.releaseDuration = $0 }
-        sliders[4].setup(0.1, 0.1, 3, name: "Atk") { self.sound.osc.attackDuration = $0 }
-        sliders[5].setup(5, 0, 15, name: "Volume") { self.sound.booster.gain = $0 }
+        sliders[3].setup(0.1, 0.1, 0.5, name: "Release") { self.sound.osc.releaseDuration = $0 }
+        sliders[4].setup(0.1, 0.1, 10, name: "Attack") { self.sound.osc.attackDuration = $0 }
+        sliders[5].setup(5, 0.1, 20, name: "Volume") { self.sound.booster.gain = $0 }
     }
     
     func noteOn(note: MIDINoteNumber) {
@@ -125,8 +149,9 @@ extension AKPropertySlider {
         self.property = name
         self.callback = callback
         self.bgColor = .gray
-        self.bgColor = .white
+        self.sliderColor = .white
         self.callback?(value)
+        self.fontSize = 15
     }
 }
 

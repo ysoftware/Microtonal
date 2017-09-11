@@ -24,6 +24,7 @@ final class Sound {
         osc = AKOscillatorBank()
         osc.attackDuration = 0.1
         osc.releaseDuration = 0.1
+        osc.sustainLevel = 1
         
         reverb = AKReverb(osc)
         reverb.dryWetMix = 0

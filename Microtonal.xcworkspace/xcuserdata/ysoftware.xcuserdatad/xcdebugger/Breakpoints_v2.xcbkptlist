@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Microtonal/ScalaReader.swift"
-            timestampString = "526775599.277174"
+            timestampString = "526837092.650582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "tuningToFrequencies(_:)"
             landmarkType = "9">
          </BreakpointContent>
