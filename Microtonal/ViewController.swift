@@ -9,6 +9,7 @@
 
 import UIKit
 import AudioKit
+import AudioKitUI
 
 fileprivate let BASEURL = "http://ysoftware.ru/scale/scl/"
 
@@ -87,7 +88,8 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
     }
     
-    @IBOutlet var sliders: [AKPropertySlider]!
+    
+    @IBOutlet var sliders: [AKPropertyControl]!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var keyboard: AKKeyboardView!
     
@@ -141,16 +143,15 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     }
 }
 
-extension AKPropertySlider {
+extension AKPropertyControl {
     func setup(_ value:Double, _ min:Double, _ max:Double, name:String, _ callback: @escaping (Double)->Void) {
         self.value = value
-        self.minimum = min
-        self.maximum = max
+        self.range = min...max
         self.property = name
         self.callback = callback
-        self.bgColor = .gray
-        self.sliderColor = .white
-        self.callback?(value)
+        self.backgroundColor = .gray
+        self.tintColor = .white
+        self.callback(value)
         self.fontSize = 15
     }
 }

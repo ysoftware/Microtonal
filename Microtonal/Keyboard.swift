@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AudioKitUI
 
 protocol KeyboardDelegate:class {
     func didPressKey(_ key:Int)

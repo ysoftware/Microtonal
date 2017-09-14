@@ -5,6 +5,9 @@
       location = "group:Microtonal.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../../../Downloads/AudioKit-develop/AudioKit/iOS/AudioKit For iOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
