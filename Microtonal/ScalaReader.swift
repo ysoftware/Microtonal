@@ -8,6 +8,10 @@
 
 import Foundation
 
+// TO-DO: sparschuh_53in13lim.scl
+// TO-DO: kwazy.scl - wtf is g=162.741892 ??
+// TO-DO: Line 2 is note count
+
 typealias TuningsInfo = (description:String, frequencies:[Double])
 
 func getTunings(from url:String) -> TuningsInfo? {

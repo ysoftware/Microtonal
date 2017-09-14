@@ -17,6 +17,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     
     let tunings = [
         "",
+        "arist_chrom.scl",
         "efg333.scl",
         "tranh.scl",
         "harmd-15.scl",
@@ -131,7 +132,8 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         sliders[2].setup(0, 0, 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
         sliders[3].setup(0.1, 0.1, 0.5, name: "Release") { self.sound.osc.releaseDuration = $0 }
         sliders[4].setup(0.1, 0.1, 10, name: "Attack") { self.sound.osc.attackDuration = $0 }
-        sliders[5].setup(5, 0.1, 20, name: "Volume") { self.sound.booster.gain = $0 }
+        sliders[5].setup(1, 1, 20, name: "Volume") {
+            self.sound.booster.gain = $0 }
     }
     
     func noteOn(note: MIDINoteNumber) {
