@@ -15,27 +15,39 @@ fileprivate let BASEURL = "http://ysoftware.ru/scale/scl/"
 
 class ViewController: UIViewController, AKKeyboardDelegate {
     
-    let tunings = [
-        "",
-        "arist_chrom.scl",
-        "efg333.scl",
-        "tranh.scl",
-        "harmd-15.scl",
-        "11-19-mclaren.scl",
-        "clipper100.scl",
-        "husmann.scl",
-        "indian-srutivina.scl", // error
-        "indra31.scl",
-        "indian_d.scl",
-        "kellners.scl",
-        "kirnberger48.scl",
-        "ligon10.scl",
-        "lucy_31.scl",
-        "marpurg.scl",
-        "pipedum_72b2.scl",
-        "savas_diat.scl",
-        "serafini-11.scl"
-    ]
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet var sliders: [AKSlider]!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var keyboard: AKKeyboardView!
+    @IBOutlet weak var shareButton: UIButton!
+    
+    // MARK: - Actions
+    
+    @IBAction func record(_ sender: Any) {
+        if sound.recorder.isRecording {
+            sound.recorder.stop()
+            recordButton.setTitle("Record", for: .normal)
+            shareButton.isHidden = false
+        }
+        else {
+            try? sound.recorder.record()
+            recordButton.setTitle("Stop", for: .normal)
+            shareButton.isHidden = true
+        }
+    }
+    
+    @IBAction func shareRecord(_ sender: Any) {
+        sound.recorder.audioFile?.exportAsynchronously(
+            name: "noise",
+            baseDir: .documents,
+            exportFormat: .wav, callback: { file, error in
+                if let url = file?.url {
+                    let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+                    vc.popoverPresentationController?.sourceView = self.shareButton
+                    self.present(vc, animated: true)
+                }
+        })
+    }
     
     @IBAction func loadTuning(_ sender: Any) {
         let alert = UIAlertController(title: "Load a tuning",
@@ -89,14 +101,29 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
     }
     
-    
-    @IBOutlet var sliders: [AKPropertyControl]!
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var keyboard: AKKeyboardView!
-    
-    // MARK: - Actions
-    
     // MARK: - Properties
+    
+    let tunings = [
+        "",
+        "arist_chrom.scl",
+        "efg333.scl",
+        "tranh.scl",
+        "harmd-15.scl",
+        "11-19-mclaren.scl",
+        "clipper100.scl",
+        "husmann.scl",
+        "indian-srutivina.scl", // error
+        "indra31.scl",
+        "indian_d.scl",
+        "kellners.scl",
+        "kirnberger48.scl",
+        "ligon10.scl",
+        "lucy_31.scl",
+        "marpurg.scl",
+        "pipedum_72b2.scl",
+        "savas_diat.scl",
+        "serafini-11.scl"
+    ]
     
     var currentTuning = 0
     let sound = Sound()
@@ -110,6 +137,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         keyboard.polyphonicMode = true
         keyboard.firstOctave = 3
         keyboard.octaveCount = 2
+        keyboard.keyOnColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
         sound.setup()
         setupActions()
@@ -127,13 +155,38 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     }
     
     func setupActions() {
-        sliders[0].setup(0, 0, 1, name: "D.Mix") { self.sound.delay.dryWetMix = $0 }
-        sliders[1].setup(0.5, 0, 5, name: "D.Time") { self.sound.delay.time = $0 }
-        sliders[2].setup(0, 0, 1, name: "Rev.Mix") { self.sound.reverb.dryWetMix = $0 }
-        sliders[3].setup(0.1, 0.1, 0.5, name: "Release") { self.sound.osc.releaseDuration = $0 }
-        sliders[4].setup(0.1, 0.1, 10, name: "Attack") { self.sound.osc.attackDuration = $0 }
-        sliders[5].setup(1, 1, 20, name: "Volume") {
-            self.sound.booster.gain = $0 }
+        shareButton.isHidden = true
+        
+        sliders[0].setup(0, 0, 1, name: "D.Mix") { [unowned self] in
+            self.sound.delay.dryWetMix = $0
+        }
+        sliders[1].setup(0.5, 0, 5, name: "D.Time") { [unowned self] in
+            self.sound.delay.time = $0
+        }
+        sliders[2].setup(0, 0, 1, name: "Rev.Mix") { [unowned self] in
+            self.sound.reverb.dryWetMix = $0
+        }
+        sliders[3].setup(0.1, 0.1, 0.5, name: "Release") { [unowned self] in
+            self.sound.osc.releaseDuration = $0
+        }
+        sliders[4].setup(0.1, 0.1, 10, name: "Attack") { [unowned self] in
+            self.sound.osc.attackDuration = $0
+        }
+        sliders[5].setup(1, 1, 15, name: "Gain") { [unowned self] in
+            self.sound.booster.gain = $0
+        }
+        sliders[6].setup(2000, 10, 5000, name: "Low Pass") { [unowned self] in
+            self.sound.filter.cutoffFrequency = $0
+        }
+        sliders[7].setup(0, 0, 1.99, name: "Resonance") { [unowned self] in
+            self.sound.filter.resonance = $0
+        }
+        sliders[8].setup(0.1, 0, 1.99, name: "Saturation") { [unowned self] in self.sound.filter.resonance = $0
+        }
+        sliders[9].setup(0, 0, 3, name: "Wave form") { [unowned self] in
+            self.sound.waveForm(at: Int($0))
+        }
+        sliders[9].discreteValues = [0, 1, 2, 3]
     }
     
     func noteOn(note: MIDINoteNumber) {
@@ -150,9 +203,9 @@ extension AKPropertyControl {
         self.value = value
         self.range = min...max
         self.property = name
-        self.callback = callback
         self.backgroundColor = .gray
         self.tintColor = .white
+        self.callback = callback
         self.callback(value)
         self.fontSize = 15
     }

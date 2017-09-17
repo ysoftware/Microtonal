@@ -33,6 +33,20 @@
 			remoteGlobalIDString = EA7D07011F4E63C200707706;
 			remoteInfo = AudioKitUI;
 		};
+		71D676531F6EF7DE006B0AB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71D6764E1F6EF7DE006B0AB6 /* AudioKit For iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C42F35001C057E03000E937C;
+			remoteInfo = AudioKit;
+		};
+		71D676551F6EF7DE006B0AB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71D6764E1F6EF7DE006B0AB6 /* AudioKit For iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA7D07011F4E63C200707706;
+			remoteInfo = AudioKitUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +62,7 @@
 		62EA9447DDB021108C35712E0661EE33 /* Pods-Microtonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Microtonal.release.xcconfig"; sourceTree = "<group>"; };
 		709C2A86CECD33C989A5F77A7E8BDFCC /* Pods-Microtonal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Microtonal.modulemap"; sourceTree = "<group>"; };
 		7186DB301F6B008B00BEB442 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../../../../Downloads/AudioKit-develop/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
+		71D6764E1F6EF7DE006B0AB6 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 		72274779FC0700345D1DC66CE9A6819C /* Pods-MicrotonalTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MicrotonalTests.modulemap"; sourceTree = "<group>"; };
 		7333318890E0C9B4177A2BC1EDD83BFD /* Pods-MicrotonalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MicrotonalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7DF604999C89C015915DFCCAE9B29DC3 /* Pods-MicrotonalUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MicrotonalUITests.modulemap"; sourceTree = "<group>"; };
@@ -139,6 +154,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		71D6764F1F6EF7DE006B0AB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71D676541F6EF7DE006B0AB6 /* AudioKit.framework */,
+				71D676561F6EF7DE006B0AB6 /* AudioKitUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +174,7 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
+				71D6764E1F6EF7DE006B0AB6 /* AudioKit For iOS.xcodeproj */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				714E8302F4CB66BDA62ACB6B47FCD3FA /* Products */,
@@ -314,6 +339,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 71D6764F1F6EF7DE006B0AB6 /* Products */;
+					ProjectRef = 71D6764E1F6EF7DE006B0AB6 /* AudioKit For iOS.xcodeproj */;
+				},
+				{
 					ProductGroup = 7186DB311F6B008B00BEB442 /* Products */;
 					ProjectRef = 7186DB301F6B008B00BEB442 /* AudioKit For iOS.xcodeproj */;
 				},
@@ -340,6 +369,20 @@
 			fileType = wrapper.framework;
 			path = AudioKitUI.framework;
 			remoteRef = 7186DB371F6B008C00BEB442 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		71D676541F6EF7DE006B0AB6 /* AudioKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKit.framework;
+			remoteRef = 71D676531F6EF7DE006B0AB6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		71D676561F6EF7DE006B0AB6 /* AudioKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKitUI.framework;
+			remoteRef = 71D676551F6EF7DE006B0AB6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

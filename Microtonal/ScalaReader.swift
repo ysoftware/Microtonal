@@ -12,9 +12,13 @@ import Foundation
 // TO-DO: kwazy.scl - wtf is g=162.741892 ??
 // TO-DO: Line 2 is note count
 
-typealias TuningsInfo = (description:String, frequencies:[Double])
+public struct Tuning {
+    var noteCount:Int = 12
+    var frequencies:[Double] = []
+    var description:String = ""
+}
 
-func getTunings(from url:String) -> TuningsInfo? {
+func getTunings(from url:String) -> Tuning? {
     guard let url = URL(string: url),
         let string = readFile(url) else {
             print("Error 0: url not found")
@@ -23,23 +27,21 @@ func getTunings(from url:String) -> TuningsInfo? {
     return parseScl(from: string)
 }
 
-func readFile(_ path:URL) -> String? {
-    return try? String(contentsOf: path, encoding: String.Encoding.utf8)
-}
-
-func parseScl(from scala:String) -> TuningsInfo? {
+func parseScl(from scala:String) -> Tuning? {
     var tunings:[Double] = []
     var counter = 0
     var description = ""
+    var noteCount = 0
     
     var failed = false
     scala.enumerateLines { l, _ in
         if l.substring(to: 1) != "!",
-            let line = l.replace("\\sg", "")?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            let line = l.replace("\\sg", "")?.trimmingCharacters(in: .whitespaces) {
             
             counter += 1
             
             if counter == 1 { description = line }
+            if counter == 2 { noteCount = Int(line) ?? 0 }
             if counter > 2 {
                 if line.match("^.*\\.") {
                     guard
@@ -75,7 +77,13 @@ func parseScl(from scala:String) -> TuningsInfo? {
         }
     }
     if failed { return nil }
-    return (description, tuningToFrequencies(tunings))
+    
+    var tuning = Tuning()
+    tuning.description = description
+    tuning.frequencies = tuningToFrequencies(tunings)
+    tuning.noteCount = noteCount
+    
+    return tuning
 }
 
 func tuningToFrequencies(_ tunings:[Double]) -> [Double] {
@@ -109,4 +117,8 @@ extension String {
     func match(_ pattern:String) -> Bool {
         return self.range(of: pattern, options: .regularExpression) != nil
     }
+}
+
+func readFile(_ path:URL) -> String? {
+    return try? String(contentsOf: path, encoding: String.Encoding.utf8)
 }
