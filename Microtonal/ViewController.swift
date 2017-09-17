@@ -30,6 +30,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
             shareButton.isHidden = false
         }
         else {
+            try? sound.recorder.reset()
             try? sound.recorder.record()
             recordButton.setTitle("Stop", for: .normal)
             shareButton.isHidden = true
@@ -38,8 +39,8 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     
     @IBAction func shareRecord(_ sender: Any) {
         sound.recorder.audioFile?.exportAsynchronously(
-            name: "noise",
-            baseDir: .documents,
+            name: "#nonmusic",
+            baseDir: .temp,
             exportFormat: .wav, callback: { file, error in
                 if let url = file?.url {
                     let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
