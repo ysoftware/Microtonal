@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F082E03178EA83F5BB0452F /* Pods_Microtonal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */; };
 		7073C506461C455F72CFE039 /* Pods_MicrotonalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86E16B596914AA97EF3D39A /* Pods_MicrotonalUITests.framework */; };
-		7166D4EA1F65D94F00F6410E /* ScalaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166D4E91F65D94F00F6410E /* ScalaReader.swift */; };
 		716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B7F1F65994B00AADA1A /* AppDelegate.swift */; };
 		716B3B821F65994B00AADA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B811F65994B00AADA1A /* ViewController.swift */; };
 		716B3B851F65994B00AADA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B831F65994B00AADA1A /* Main.storyboard */; };
@@ -63,7 +62,6 @@
 		19237B1C4D5A2EAA75592C51 /* Pods-MicrotonalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalTests/Pods-MicrotonalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D347DCD335E486B8F241ADF /* Pods-Microtonal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microtonal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Microtonal/Pods-Microtonal.release.xcconfig"; sourceTree = "<group>"; };
 		6BDC929FE8AA5E38FAC709D1 /* Pods-MicrotonalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrotonalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7166D4E91F65D94F00F6410E /* ScalaReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalaReader.swift; sourceTree = "<group>"; };
 		716B3B7C1F65994B00AADA1A /* Microtonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Microtonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716B3B7F1F65994B00AADA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716B3B811F65994B00AADA1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,14 +129,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7166D4E81F65D94600F6410E /* Scala */ = {
-			isa = PBXGroup;
-			children = (
-				7166D4E91F65D94F00F6410E /* ScalaReader.swift */,
-			);
-			name = Scala;
-			sourceTree = "<group>";
-		};
 		716B3B731F65994B00AADA1A = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +154,6 @@
 		716B3B7E1F65994B00AADA1A /* Microtonal */ = {
 			isa = PBXGroup;
 			children = (
-				7166D4E81F65D94600F6410E /* Scala */,
 				716B3BAD1F659A9F00AADA1A /* Sound */,
 				716B3B811F65994B00AADA1A /* ViewController.swift */,
 				716B3B831F65994B00AADA1A /* Main.storyboard */,
@@ -510,7 +499,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				716B3B821F65994B00AADA1A /* ViewController.swift in Sources */,
-				7166D4EA1F65D94F00F6410E /* ScalaReader.swift in Sources */,
 				716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */,
 				716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */,
 				716B3BBF1F65B5C400AADA1A /* Sound.swift in Sources */,

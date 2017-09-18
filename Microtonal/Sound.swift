@@ -12,8 +12,6 @@ final class Sound {
     
     var waveForm:AKTableType = .sine
     
-    var tunings:[Double]?
-    
     var osc:AKOscillatorBank!
     var delay:AKDelay!
     var reverb:AKReverb!
@@ -22,6 +20,7 @@ final class Sound {
     var booster:AKBooster!
     var recorder:AKNodeRecorder!
     var limiter:AKPeakLimiter!
+    var tuningTable:AKTuningTable!
     
     var a:Double = 440
     
@@ -31,6 +30,8 @@ final class Sound {
         osc = AKOscillatorBank(waveform: table)
         osc.attackDuration = 0.1
         osc.releaseDuration = 0.1
+        
+        tuningTable = AKPolyphonicNode.tuningTable
         
         reverb = AKReverb(osc)
         reverb.dryWetMix = 0
@@ -52,12 +53,8 @@ final class Sound {
     }
     
     func play(note:MIDINoteNumber) {
-        if let freqs = tunings, freqs.count >= 128 {
-            osc.play(noteNumber: note, velocity: 80, frequency: freqs[Int(note)])
-        }
-        else {
-            osc.play(noteNumber: note, velocity: 80)
-        }
+        let frequency = AKPolyphonicNode.tuningTable.frequency(forNoteNumber: note)
+        osc.play(noteNumber: note, velocity: 80, frequency: frequency)
     }
     
     func stop(note:MIDINoteNumber) {

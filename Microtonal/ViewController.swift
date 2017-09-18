@@ -144,14 +144,15 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         setupActions()
     }
     
-    func loadTuning(from url:String) {
-        if let tunings = getTunings(from: url) {
-            sound.tunings = tunings.frequencies
-            label.text = tunings.description
+    func loadTuning(from urlString:String) {
+        if let url = URL(string: urlString),
+            let frequencies = AKTuningTable().frequencies(fromScalaString: readFile(url)){
+            sound.tuningTable.tuningTable(fromFrequencies: frequencies)
+            label.text = url.lastPathComponent
         }
         else {
             label.text = "No tuning"
-            sound.tunings = nil
+            sound.tuningTable.defaultTuning()
         }
     }
     
@@ -197,6 +198,10 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     func noteOff(note: MIDINoteNumber) {
         sound.stop(note: note)
     }
+}
+
+func readFile(_ path:URL) -> String? {
+    return try? String(contentsOf: path, encoding: String.Encoding.utf8)
 }
 
 extension AKPropertyControl {
