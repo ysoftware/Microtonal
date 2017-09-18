@@ -9,8 +9,7 @@
 import AudioKit
 
 final class Sound {
-    
-    var waveForm:AKTableType = .sine
+    var waveForm:AKTableType = .sawtooth
     
     var osc:AKOscillatorBank!
     var delay:AKDelay!
@@ -25,7 +24,7 @@ final class Sound {
     var a:Double = 440
     
     func setup() {
-        let table = AKTable(waveForm, phase: 0, count: 4096)
+        let table = AKTable(waveForm)
         
         osc = AKOscillatorBank(waveform: table)
         osc.attackDuration = 0.1
@@ -63,10 +62,11 @@ final class Sound {
     
     func waveForm(at index: Int) {
         AudioKit.stop()
-        waveForm = [AKTableType.sawtooth,
-                    AKTableType.sine,
-                    AKTableType.triangle,
-                    AKTableType.square][index]
+        let newWaveForm = [AKTableType.sawtooth,
+                           AKTableType.sine,
+                           AKTableType.triangle,
+                           AKTableType.square][index]
+        waveForm = newWaveForm
         setup()
     }
 }

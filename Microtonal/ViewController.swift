@@ -136,11 +136,11 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         
         keyboard.delegate = self
         keyboard.polyphonicMode = true
-        keyboard.firstOctave = 3
         keyboard.octaveCount = 2
+        keyboard.firstOctave = 3
         keyboard.keyOnColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
-        sound.setup()
+//        sound.setup()
         setupActions()
     }
     
@@ -159,36 +159,39 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     func setupActions() {
         shareButton.isHidden = true
         
-        sliders[0].setup(0, 0, 1, name: "D.Mix") { [unowned self] in
-            self.sound.delay.dryWetMix = $0
-        }
-        sliders[1].setup(0.5, 0, 5, name: "D.Time") { [unowned self] in
-            self.sound.delay.time = $0
-        }
-        sliders[2].setup(0, 0, 1, name: "Rev.Mix") { [unowned self] in
-            self.sound.reverb.dryWetMix = $0
-        }
-        sliders[3].setup(0.1, 0.1, 0.5, name: "Release") { [unowned self] in
-            self.sound.osc.releaseDuration = $0
-        }
-        sliders[4].setup(0.1, 0.1, 10, name: "Attack") { [unowned self] in
-            self.sound.osc.attackDuration = $0
-        }
-        sliders[5].setup(1, 1, 15, name: "Gain") { [unowned self] in
-            self.sound.booster.gain = $0
-        }
-        sliders[6].setup(2000, 10, 5000, name: "Low Pass") { [unowned self] in
-            self.sound.filter.cutoffFrequency = $0
-        }
-        sliders[7].setup(0, 0, 1.99, name: "Resonance") { [unowned self] in
-            self.sound.filter.resonance = $0
-        }
-        sliders[8].setup(0.1, 0, 1.99, name: "Saturation") { [unowned self] in self.sound.filter.resonance = $0
-        }
-        sliders[9].setup(0, 0, 3, name: "Wave form") { [unowned self] in
+        sliders[5].setup(0, 0, 3, name: "Wave form") { [unowned self] in
             self.sound.waveForm(at: Int($0))
         }
-        sliders[9].discreteValues = [0, 1, 2, 3]
+        sliders[5].discreteValues = [0, 1, 2, 3]
+        
+        sliders[6].setup(0.1, 0.1, 10, name: "Attack") { [unowned self] in
+            self.sound.osc.attackDuration = $0
+        }
+        sliders[7].setup(0.5, 0, 5, name: "D.Time") { [unowned self] in
+            self.sound.delay.time = $0
+        }
+        sliders[8].setup(2000, 100, 3500, name: "Low Pass") { [unowned self] in
+            self.sound.filter.cutoffFrequency = $0
+        }
+        sliders[9].setup(0, 0, 1.99, name: "Resonance") { [unowned self] in
+            self.sound.filter.resonance = $0
+        }
+        
+        sliders[0].setup(1, 1, 15, name: "Gain") { [unowned self] in
+            self.sound.booster.gain = $0
+        }
+        sliders[1].setup(0.1, 0.1, 0.5, name: "Release") { [unowned self] in
+            self.sound.osc.releaseDuration = $0
+        }
+        sliders[2].setup(0, 0, 1, name: "D.Mix") { [unowned self] in
+            self.sound.delay.dryWetMix = $0
+        }
+        sliders[3].setup(0, 0, 1, name: "Rev.Mix") { [unowned self] in
+            self.sound.reverb.dryWetMix = $0
+        }
+        sliders[4].setup(0.1, 0, 1.99, name: "Saturation") { [unowned self] in self.sound.filter.resonance = $0
+        }
+       
     }
     
     func noteOn(note: MIDINoteNumber) {
