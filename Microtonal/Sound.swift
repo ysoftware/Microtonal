@@ -51,13 +51,17 @@ final class Sound {
         AudioKit.start()
     }
     
-    func play(note:MIDINoteNumber) {
+    func play(note:MIDINoteNumber, velocity:MIDIVelocity = 80) {
         let frequency = AKPolyphonicNode.tuningTable.frequency(forNoteNumber: note)
-        osc.play(noteNumber: note, velocity: 80, frequency: frequency)
+        osc.play(noteNumber: note, velocity: velocity, frequency: frequency)
     }
     
     func stop(note:MIDINoteNumber) {
         osc.stop(noteNumber: note)
+    }
+    
+    func pitchBend(_ semitones:Double) {
+        osc.pitchBend = semitones
     }
     
     func waveForm(at index: Int) {

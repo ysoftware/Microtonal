@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,26 +20,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-DL-Nah">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="216"/>
+                                <rect key="frame" x="0.0" y="114" width="1024" height="300.5"/>
                                 <subviews>
                                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ema-T3-7zh">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="216"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWP-4P-4Pb">
-                                                <rect key="frame" x="0.0" y="0.0" width="568" height="300.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EAE-Yn-o2x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="568" height="300.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-2L-BBW">
-                                                                <rect key="frame" x="0.0" y="71.5" width="184" height="229"/>
+                                                                <rect key="frame" x="0.0" y="10.5" width="336" height="290"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-3y-BFY" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="UaZ-OA-tAl">
@@ -48,7 +48,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjR-Qb-dAE" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="46" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="60" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="lYy-9E-If1">
@@ -57,7 +57,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yz-rH-jf0" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="92" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="120" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="Btw-ry-TAE">
@@ -66,7 +66,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Al-mf-Xlc" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="138" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="180" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="0sZ-ur-HMI">
@@ -75,7 +75,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-TC-mlY" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="184" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="240" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="PfU-8l-aLJ">
@@ -87,10 +87,10 @@
                                                                 <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-ww-dj7">
-                                                                <rect key="frame" x="192" y="71.5" width="184" height="229"/>
+                                                                <rect key="frame" x="344" y="10.5" width="336" height="290"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-Lz-h0i" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="6ic-rZ-Jpx">
@@ -99,7 +99,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-ip-TqA" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="46" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="60" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="MDI-En-8XX">
@@ -108,7 +108,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-VU-J7d" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="92" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="120" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="gNF-iY-wR9">
@@ -117,7 +117,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzb-8z-Yam" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="138" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="180" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="HyK-9V-XFM">
@@ -126,7 +126,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gg5-E3-hmR" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="184" width="184" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="240" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="147-Qd-ccq">
@@ -138,13 +138,24 @@
                                                                 <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-3V-3fF">
-                                                                <rect key="frame" x="384" y="0.0" width="184" height="300.5"/>
+                                                                <rect key="frame" x="688" y="0.0" width="336" height="300.5"/>
                                                                 <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-rL-wmG">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="40.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="No tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-R2-0uk">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="336" height="40.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bl8-XG-V8d">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="65"/>
+                                                                        <rect key="frame" x="0.0" y="48.5" width="336" height="65"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-YQ-qk2">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="65"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="168" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="Panic!"/>
                                                                                 <connections>
@@ -152,7 +163,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IX-bA-5Vf">
-                                                                                <rect key="frame" x="92" y="0.0" width="92" height="65"/>
+                                                                                <rect key="frame" x="168" y="0.0" width="168" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="Save"/>
                                                                                 <connections>
@@ -161,17 +172,11 @@
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="No tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-R2-0uk">
-                                                                        <rect key="frame" x="0.0" y="73" width="184" height="40.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4hE-0g-Acg">
-                                                                        <rect key="frame" x="0.0" y="121.5" width="184" height="65"/>
+                                                                        <rect key="frame" x="0.0" y="121.5" width="336" height="65"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQw-GR-ura">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="65"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="164" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="&lt;"/>
                                                                                 <connections>
@@ -179,7 +184,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-qq-Y2A">
-                                                                                <rect key="frame" x="96" y="0.0" width="88" height="65"/>
+                                                                                <rect key="frame" x="172" y="0.0" width="164" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="&gt;"/>
                                                                                 <connections>
@@ -189,10 +194,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FZq-VS-1df">
-                                                                        <rect key="frame" x="0.0" y="194.5" width="184" height="65"/>
+                                                                        <rect key="frame" x="0.0" y="194.5" width="336" height="65"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-ts-GfR">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="65"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="164" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="Next"/>
                                                                                 <connections>
@@ -200,7 +205,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcy-zP-LXb">
-                                                                                <rect key="frame" x="96" y="0.0" width="88" height="65"/>
+                                                                                <rect key="frame" x="172" y="0.0" width="164" height="65"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <state key="normal" title="Load"/>
                                                                                 <connections>
@@ -210,7 +215,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bre-GZ-5bv">
-                                                                        <rect key="frame" x="0.0" y="267.5" width="184" height="33"/>
+                                                                        <rect key="frame" x="0.0" y="267.5" width="336" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <state key="normal" title="Record">
                                                                             <color key="titleColor" red="1" green="0.028972621896812378" blue="0.088385520025981767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -241,6 +246,11 @@
                                             <constraint firstAttribute="bottom" secondItem="DWP-4P-4Pb" secondAttribute="bottom" id="rjR-cF-Ud8"/>
                                             <constraint firstItem="DWP-4P-4Pb" firstAttribute="leading" secondItem="ema-T3-7zh" secondAttribute="leading" id="vQD-uX-Dyy"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="84c-lo-Fq4"/>
+                                            </mask>
+                                        </variation>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -249,12 +259,23 @@
                                     <constraint firstItem="ema-T3-7zh" firstAttribute="width" secondItem="i5H-DL-Nah" secondAttribute="width" id="JEc-dq-pWL"/>
                                     <constraint firstAttribute="bottom" secondItem="ema-T3-7zh" secondAttribute="bottom" id="JzT-hC-LTH"/>
                                     <constraint firstAttribute="trailing" secondItem="ema-T3-7zh" secondAttribute="trailing" id="KJD-cA-9Bu"/>
+                                    <constraint firstAttribute="height" secondItem="EAE-Yn-o2x" secondAttribute="height" id="RRz-5h-ZD1"/>
                                     <constraint firstItem="ema-T3-7zh" firstAttribute="leading" secondItem="i5H-DL-Nah" secondAttribute="leading" id="ZMg-EY-RXe"/>
                                     <constraint firstItem="ema-T3-7zh" firstAttribute="top" secondItem="i5H-DL-Nah" secondAttribute="top" id="gaV-cU-3cp"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RRz-5h-ZD1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="RRz-5h-ZD1"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-GD-wel" userLabel="Keyboard" customClass="AKKeyboardView" customModule="AudioKitUI">
-                                <rect key="frame" x="0.0" y="224" width="568" height="96"/>
+                                <rect key="frame" x="0.0" y="422.5" width="1024" height="345.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -267,8 +288,21 @@
                             <constraint firstItem="EXW-GD-wel" firstAttribute="top" secondItem="i5H-DL-Nah" secondAttribute="bottom" constant="8" symbolic="YES" id="KTO-m3-iK8"/>
                             <constraint firstAttribute="trailing" secondItem="EXW-GD-wel" secondAttribute="trailing" id="LMU-4G-oaC"/>
                             <constraint firstItem="i5H-DL-Nah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RpJ-q0-OLH"/>
+                            <constraint firstItem="EXW-GD-wel" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="bHA-hG-70I"/>
                             <constraint firstItem="EXW-GD-wel" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="nX6-F4-WG1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bHA-hG-70I"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="RpJ-q0-OLH"/>
+                                <include reference="bHA-hG-70I"/>
+                                <exclude reference="nX6-F4-WG1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="keyboard" destination="EXW-GD-wel" id="Bzo-8F-BWf"/>

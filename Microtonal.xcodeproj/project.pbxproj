@@ -19,6 +19,7 @@
 		716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB31F65A2C800AADA1A /* Extensions.swift */; };
 		716B3BB81F65A85E00AADA1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB71F65A85E00AADA1A /* Constants.swift */; };
 		716B3BBF1F65B5C400AADA1A /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BBE1F65B5C400AADA1A /* Sound.swift */; };
+		7178C2061F797904005BDC27 /* MIDIReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C2051F797904005BDC27 /* MIDIReceiver.swift */; };
 		7186DB391F6B00D100BEB442 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7186DB3A1F6B00D100BEB442 /* AudioKit.framework */; };
 		7186DB3F1F6B043F00BEB442 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7186DB3A1F6B00D100BEB442 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7186DB421F6B044300BEB442 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7186DB3C1F6B01B500BEB442 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -78,6 +79,8 @@
 		716B3BB31F65A2C800AADA1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		716B3BB71F65A85E00AADA1A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		716B3BBE1F65B5C400AADA1A /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		7178C2031F79738F005BDC27 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		7178C2051F797904005BDC27 /* MIDIReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIReceiver.swift; sourceTree = "<group>"; };
 		7186DB3A1F6B00D100BEB442 /* AudioKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7186DB3C1F6B01B500BEB442 /* AudioKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899908B3871364367C6A0BC8 /* Pods_MicrotonalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrotonalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				716B3BBE1F65B5C400AADA1A /* Sound.swift */,
+				7178C2051F797904005BDC27 /* MIDIReceiver.swift */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 		98B217592E3B44A9DE335BF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7178C2031F79738F005BDC27 /* CoreMIDI.framework */,
 				7186DB3C1F6B01B500BEB442 /* AudioKitUI.framework */,
 				7186DB3A1F6B00D100BEB442 /* AudioKit.framework */,
 				126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */,
@@ -501,6 +506,7 @@
 				716B3B821F65994B00AADA1A /* ViewController.swift in Sources */,
 				716B3B801F65994B00AADA1A /* AppDelegate.swift in Sources */,
 				716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */,
+				7178C2061F797904005BDC27 /* MIDIReceiver.swift in Sources */,
 				716B3BBF1F65B5C400AADA1A /* Sound.swift in Sources */,
 				716B3BB81F65A85E00AADA1A /* Constants.swift in Sources */,
 			);

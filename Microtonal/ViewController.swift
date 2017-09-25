@@ -20,6 +20,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var keyboard: AKKeyboardView!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var midiLabel: UILabel!
     
     // MARK: - Actions
     
@@ -106,28 +107,36 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     
     let tunings = [
         "",
-        "arist_chrom.scl",
-        "efg333.scl",
-        "tranh.scl",
-        "harmd-15.scl",
-        "11-19-mclaren.scl",
-        "clipper100.scl",
-        "husmann.scl",
-        "indian-srutivina.scl", // error
-        "indra31.scl",
-        "indian_d.scl",
-        "kellners.scl",
-        "kirnberger48.scl",
-        "ligon10.scl",
-        "lucy_31.scl",
+        "arist_chrom.scl",      // 7
+        "efg333.scl",           // 4
+        "efg3357.scl",          // 12...
+        "kellner.scl",
+        "12-22.scl",
+        "12-22h.scl",
+        "12-27.scl",
+        "12-31.scl",
+        "12-43.scl",
+        "12-46.scl",
+        "12-46p.scl",
+        "24-41.scl",            // 24...
+        "24-60.scl",
+        "24-80.scl",
+        "24-94.scl",
+        "12-79mos159et.scl",
+        "12-yarman24c.scl",
+        "tranh3.scl",           // 6?
+        "harmd-15.scl",         // 7
+        "11-19-mclaren.scl",    // 11
+        "clipper100.scl",       // 17
+        "husmann.scl",          // 6
+        "indian_d.scl",         // 7
         "marpurg.scl",
-        "pipedum_72b2.scl",
-        "savas_diat.scl",
-        "serafini-11.scl"
+        "savas_diat.scl"
     ]
     
     var currentTuning = 0
     let sound = Sound()
+    var midiReceiver:MIDIReceiver!
     
     // MARK: - ViewController
     
@@ -140,7 +149,8 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         keyboard.firstOctave = 3
         keyboard.keyOnColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
-//        sound.setup()
+        midiReceiver = MIDIReceiver(sound)
+    
         setupActions()
     }
     
@@ -173,7 +183,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         sliders[8].setup(2000, 100, 3500, name: "Low Pass") { [unowned self] in
             self.sound.filter.cutoffFrequency = $0
         }
-        sliders[9].setup(0, 0, 1.99, name: "Resonance") { [unowned self] in
+        sliders[9].setup(0.1, 0.1, 1.99, name: "Resonance") { [unowned self] in
             self.sound.filter.resonance = $0
         }
         
@@ -191,7 +201,6 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
         sliders[4].setup(0.1, 0, 1.99, name: "Saturation") { [unowned self] in self.sound.filter.resonance = $0
         }
-       
     }
     
     func noteOn(note: MIDINoteNumber) {
@@ -201,6 +210,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     func noteOff(note: MIDINoteNumber) {
         sound.stop(note: note)
     }
+
 }
 
 func readFile(_ path:URL) -> String? {
