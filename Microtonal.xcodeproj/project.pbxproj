@@ -225,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716B3BA41F65994B00AADA1A /* Build configuration list for PBXNativeTarget "Microtonal" */;
 			buildPhases = (
+				71B9B3F01F7994B200C71ECF /* Increment Build Number */,
 				07BD66BAB5BF563899DD6AEF /* [CP] Check Pods Manifest.lock */,
 				716B3B781F65994B00AADA1A /* Sources */,
 				716B3B791F65994B00AADA1A /* Frameworks */,
@@ -435,6 +436,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicrotonalUITests/Pods-MicrotonalUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		71B9B3F01F7994B200C71ECF /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 		8ECDBA0631154CEFA72CEBA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
