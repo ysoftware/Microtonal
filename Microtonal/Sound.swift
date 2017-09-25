@@ -25,30 +25,38 @@ final class Sound {
     
     func setup() {
         let table = AKTable(waveForm)
+        tuningTable = AKPolyphonicNode.tuningTable
         
         osc = AKOscillatorBank(waveform: table)
         osc.attackDuration = 0.1
         osc.releaseDuration = 0.1
         
-        tuningTable = AKPolyphonicNode.tuningTable
-        
-        reverb = AKReverb(osc)
-        reverb.dryWetMix = 0
-        
-        delay = AKDelay(reverb)
+        delay = AKDelay(osc)
         delay.dryWetMix = 0
         delay.time = 0.5
-        delay.start()
         
-        booster = AKBooster(delay, gain: 1)
+        reverb = AKReverb(delay)
+        reverb.dryWetMix = 0
+        
+        booster = AKBooster(reverb, gain: 1)
         
         filter = AKKorgLowPassFilter(booster)
         
         limiter = AKPeakLimiter(filter)
         
-        try! recorder = AKNodeRecorder(node: limiter)
-        AudioKit.output = limiter
+        bitcrusher = AKBitCrusher(limiter, bitDepth: 24)
+        
+        let output = AKMixer([bitcrusher, limiter]) // <= change this
+        
+        try! recorder = AKNodeRecorder(node: output)
+        AudioKit.output = output
         AudioKit.start()
+        
+        delay.start()
+        reverb.start()
+        filter.start()
+        limiter.start()
+        bitcrusher.start()
     }
     
     func play(note:MIDINoteNumber, velocity:MIDIVelocity = 80) {

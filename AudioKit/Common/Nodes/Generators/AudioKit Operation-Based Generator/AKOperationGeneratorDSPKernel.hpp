@@ -34,10 +34,11 @@ public:
 
         plumber_register(&pd);
         plumber_init(&pd);
-        addUgensToFTable(&pd);
         pd.sp = sp;
         if (sporthCode != nil) {
-            plumber_parse_string(&pd, sporthCode);
+            if (customUgens.size() == 0) {
+                plumber_parse_string(&pd, sporthCode);
+            }
             plumber_compute(&pd, PLUMBER_INIT);
         }
         
@@ -51,6 +52,9 @@ public:
         if (length) {
             sporthCode = (char *)malloc(length);
             memcpy(sporthCode, sporth, length);
+        }
+        if (customUgens.size() > 0) {
+            plumber_recompile_string_v2(&pd, sporthCode, this, &addUgensToKernel);
         }
     }
 

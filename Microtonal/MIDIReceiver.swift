@@ -30,6 +30,6 @@ final class MIDIReceiver:AKMIDIListener {
     }
     
     func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord, channel: MIDIChannel) {
-        sound?.pitchBend(2 / (16384.0 / Double(pitchWheelValue)))
+        sound?.pitchBend(2 / 16384.0 / Double(pitchWheelValue))
     }
 }

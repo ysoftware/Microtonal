@@ -112,16 +112,16 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         "efg3357.scl",          // 12...
         "kellner.scl",
         "12-22.scl",
-        "12-22h.scl",
-        "12-27.scl",
-        "12-31.scl",
-        "12-43.scl",
-        "12-46.scl",
-        "12-46p.scl",
+//        "12-22h.scl",
+//        "12-27.scl",
+//        "12-31.scl",
+//        "12-43.scl",
+//        "12-46.scl",
+//        "12-46p.scl",
         "24-41.scl",            // 24...
-        "24-60.scl",
-        "24-80.scl",
-        "24-94.scl",
+//        "24-60.scl",
+//        "24-80.scl",
+//        "24-94.scl",
         "12-79mos159et.scl",
         "12-yarman24c.scl",
         "tranh3.scl",           // 6?
@@ -169,22 +169,31 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     func setupActions() {
         shareButton.isHidden = true
         
-        sliders[5].setup(0, 0, 3, name: "Wave form") { [unowned self] in
+        sliders[6].setup(0, 0, 3, name: "Wave form") { [unowned self] in
             self.sound.waveForm(at: Int($0))
         }
-        sliders[5].discreteValues = [0, 1, 2, 3]
+        sliders[6].discreteValues = [0, 1, 2, 3]
         
-        sliders[6].setup(0.1, 0.1, 10, name: "Attack") { [unowned self] in
+        sliders[7].setup(0.1, 0.1, 10, name: "Attack") { [unowned self] in
             self.sound.osc.attackDuration = $0
         }
-        sliders[7].setup(0.5, 0, 5, name: "D.Time") { [unowned self] in
+        sliders[8].setup(0.5, 0, 5, name: "D.Time") { [unowned self] in
             self.sound.delay.time = $0
         }
-        sliders[8].setup(2000, 100, 3500, name: "Low Pass") { [unowned self] in
+        sliders[9].setup(2000, 100, 3500, name: "Low Pass") { [unowned self] in
             self.sound.filter.cutoffFrequency = $0
         }
-        sliders[9].setup(0.1, 0.1, 1.99, name: "Resonance") { [unowned self] in
+        sliders[10].setup(0.1, 0.1, 1.99, name: "Resonance") { [unowned self] in
             self.sound.filter.resonance = $0
+        }
+        sliders[11].setup(13, 3, 13, name: "Bitcrush Depth") { [unowned self] value in
+            self.sound.bitcrusher.bitDepth = value
+            if value == 13 {
+                self.sound.bitcrusher.stop()
+            }
+            else if self.sound.bitcrusher.isStopped {
+                self.sound.bitcrusher.start()
+            }
         }
         
         sliders[0].setup(1, 1, 15, name: "Gain") { [unowned self] in
@@ -200,6 +209,9 @@ class ViewController: UIViewController, AKKeyboardDelegate {
             self.sound.reverb.dryWetMix = $0
         }
         sliders[4].setup(0.1, 0, 1.99, name: "Saturation") { [unowned self] in self.sound.filter.resonance = $0
+        }
+        sliders[5].setup(0.5, 0, 1, name: "Delay FB") { [unowned self] in
+            self.sound.delay.feedback = $0
         }
     }
     

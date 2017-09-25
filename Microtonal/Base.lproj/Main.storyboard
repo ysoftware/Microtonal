@@ -24,19 +24,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-DL-Nah">
-                                <rect key="frame" x="0.0" y="114" width="1024" height="300.5"/>
+                                <rect key="frame" x="0.0" y="64.5" width="1024" height="350"/>
                                 <subviews>
                                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ema-T3-7zh">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="350"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWP-4P-4Pb">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="350"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EAE-Yn-o2x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="300.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="350"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-2L-BBW">
-                                                                <rect key="frame" x="0.0" y="10.5" width="336" height="290"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="336" height="350"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-3y-BFY" customClass="AKSlider" customModule="AudioKitUI">
                                                                         <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
@@ -83,14 +83,8 @@
                                                                             </constraint>
                                                                         </constraints>
                                                                     </view>
-                                                                </subviews>
-                                                                <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-ww-dj7">
-                                                                <rect key="frame" x="344" y="10.5" width="336" height="290"/>
-                                                                <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-Lz-h0i" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="300" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="6ic-rZ-Jpx">
@@ -98,8 +92,14 @@
                                                                             </constraint>
                                                                         </constraints>
                                                                     </view>
+                                                                </subviews>
+                                                                <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-ww-dj7">
+                                                                <rect key="frame" x="344" y="0.0" width="336" height="350"/>
+                                                                <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-ip-TqA" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="60" width="336" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="MDI-En-8XX">
@@ -108,7 +108,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-VU-J7d" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="120" width="336" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="60" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="gNF-iY-wR9">
@@ -117,7 +117,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzb-8z-Yam" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="180" width="336" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="120" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="HyK-9V-XFM">
@@ -126,10 +126,28 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gg5-E3-hmR" customClass="AKSlider" customModule="AudioKitUI">
-                                                                        <rect key="frame" x="0.0" y="240" width="336" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="180" width="336" height="50"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="147-Qd-ccq">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                                            </constraint>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-q0-5iQ" customClass="AKSlider" customModule="AudioKitUI">
+                                                                        <rect key="frame" x="0.0" y="240" width="336" height="50"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="Rct-C0-GcB">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                                            </constraint>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-T2-v6l" customClass="AKSlider" customModule="AudioKitUI">
+                                                                        <rect key="frame" x="0.0" y="300" width="336" height="50"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="6di-jY-Cvg">
                                                                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                                                                             </constraint>
                                                                         </constraints>
@@ -138,7 +156,7 @@
                                                                 <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-3V-3fF">
-                                                                <rect key="frame" x="688" y="0.0" width="336" height="300.5"/>
+                                                                <rect key="frame" x="688" y="49.5" width="336" height="300.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-rL-wmG">
                                                                         <rect key="frame" x="0.0" y="0.0" width="336" height="40.5"/>
@@ -314,11 +332,13 @@
                         <outletCollection property="sliders" destination="1yz-rH-jf0" collectionClass="NSMutableArray" id="a0d-wM-X4K"/>
                         <outletCollection property="sliders" destination="5Al-mf-Xlc" collectionClass="NSMutableArray" id="Ki6-y6-hEj"/>
                         <outletCollection property="sliders" destination="XxE-TC-mlY" collectionClass="NSMutableArray" id="dIr-Vn-JkK"/>
-                        <outletCollection property="sliders" destination="tjh-Lz-h0i" collectionClass="NSMutableArray" id="Ef8-zM-Wk1"/>
                         <outletCollection property="sliders" destination="D0B-ip-TqA" collectionClass="NSMutableArray" id="EuD-ge-cFU"/>
                         <outletCollection property="sliders" destination="2Mv-VU-J7d" collectionClass="NSMutableArray" id="H6H-se-hAW"/>
                         <outletCollection property="sliders" destination="jzb-8z-Yam" collectionClass="NSMutableArray" id="LYN-O7-fnN"/>
                         <outletCollection property="sliders" destination="gg5-E3-hmR" collectionClass="NSMutableArray" id="fEs-Vo-1YH"/>
+                        <outletCollection property="sliders" destination="4ZN-q0-5iQ" collectionClass="NSMutableArray" id="rWf-sA-o1R"/>
+                        <outletCollection property="sliders" destination="bRh-T2-v6l" collectionClass="NSMutableArray" id="XY5-e9-EMR"/>
+                        <outletCollection property="sliders" destination="tjh-Lz-h0i" collectionClass="NSMutableArray" id="Ef8-zM-Wk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
