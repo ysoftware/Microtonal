@@ -87,6 +87,15 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/AudioKit/iOS/AudioKit.framework"
+  install_framework "${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/AudioKit/iOS/AudioKit.framework"
+  install_framework "${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

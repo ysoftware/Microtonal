@@ -21,15 +21,20 @@ final class MIDIReceiver:AKMIDIListener {
         self.sound = sound
     }
     
-    func receivedMIDINoteOn(noteNumber: MIDINoteNumber, velocity: MIDIVelocity, channel: MIDIChannel) {
+    func receivedMIDINoteOn(noteNumber: MIDINoteNumber,
+                            velocity: MIDIVelocity,
+                            channel: MIDIChannel) {
         sound?.play(note: noteNumber, velocity: velocity)
     }
     
-    func receivedMIDINoteOff(noteNumber: MIDINoteNumber, velocity: MIDIVelocity, channel: MIDIChannel) {
+    func receivedMIDINoteOff(noteNumber: MIDINoteNumber,
+                             velocity: MIDIVelocity,
+                             channel: MIDIChannel) {
         sound?.stop(note: noteNumber)
     }
     
-    func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord, channel: MIDIChannel) {
+    func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord,
+                                channel: MIDIChannel) {
         sound?.pitchBend((2 / (16384.0 / Double(pitchWheelValue))) - 1)
     }
 }

@@ -8,16 +8,6 @@ target 'Microtonal' do
   use_frameworks!
 
   # Pods for Microtonal
-  # pod 'AudioKit', '~> 3.7'
-
-  target 'MicrotonalTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'MicrotonalUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'AudioKit'
 
 end

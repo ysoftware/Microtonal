@@ -83,10 +83,10 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     
     @IBAction func nextTuning(_ sender: Any) {
         currentTuning += 1
-        if  currentTuning >= tunings.count {
+        if  currentTuning >= Tunings.tunings.count {
             currentTuning = 0
         }
-        loadTuning(from: BASEURL + tunings[currentTuning])
+        loadTuning()
     }
     
     @IBAction func higherOctave(_ sender: Any) {
@@ -104,35 +104,6 @@ class ViewController: UIViewController, AKKeyboardDelegate {
     }
     
     // MARK: - Properties
-    
-    let tunings = [
-        "",
-        "arist_chrom.scl",      // 7
-        "efg333.scl",           // 4
-        "efg3357.scl",          // 12...
-        "kellner.scl",
-        "12-22.scl",
-//        "12-22h.scl",
-//        "12-27.scl",
-//        "12-31.scl",
-//        "12-43.scl",
-//        "12-46.scl",
-//        "12-46p.scl",
-        "24-41.scl",            // 24...
-//        "24-60.scl",
-//        "24-80.scl",
-//        "24-94.scl",
-        "12-79mos159et.scl",
-        "12-yarman24c.scl",
-        "tranh3.scl",           // 6?
-        "harmd-15.scl",         // 7
-        "11-19-mclaren.scl",    // 11
-        "clipper100.scl",       // 17
-        "husmann.scl",          // 6
-        "indian_d.scl",         // 7
-        "marpurg.scl",
-        "savas_diat.scl"
-    ]
     
     var currentTuning = 0
     let sound = Sound()
@@ -152,18 +123,6 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         midiReceiver = MIDIReceiver(sound)
     
         setupActions()
-    }
-    
-    func loadTuning(from urlString:String) {
-        if let url = URL(string: urlString),
-            let frequencies = AKTuningTable().frequencies(fromScalaString: readFile(url)){
-            sound.tuningTable.tuningTable(fromFrequencies: frequencies)
-            label.text = url.lastPathComponent
-        }
-        else {
-            label.text = "No tuning"
-            sound.tuningTable.defaultTuning()
-        }
     }
     
     func setupActions() {
@@ -215,30 +174,24 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
     }
     
+    func loadTuning() {
+        let url = URL(string: BASEURL + Tunings.tunings[currentTuning])!
+        if let freqs = Tunings.loadFrequencies(from: url) {
+            sound.tuningTable.tuningTable(fromFrequencies: freqs)
+            label.text = url.lastPathComponent
+        }
+        else {
+            label.text = "No tuning"
+            sound.tuningTable.defaultTuning()
+        }
+    }
+    
     func noteOn(note: MIDINoteNumber) {
         sound.play(note: note)
     }
     
     func noteOff(note: MIDINoteNumber) {
         sound.stop(note: note)
-    }
-
-}
-
-func readFile(_ path:URL) -> String? {
-    return try? String(contentsOf: path, encoding: String.Encoding.utf8)
-}
-
-extension AKPropertyControl {
-    func setup(_ value:Double, _ min:Double, _ max:Double, name:String, _ callback: @escaping (Double)->Void) {
-        self.value = value
-        self.range = min...max
-        self.property = name
-        self.backgroundColor = .gray
-        self.tintColor = .white
-        self.callback = callback
-        self.callback(value)
-        self.fontSize = 15
     }
 }
 
