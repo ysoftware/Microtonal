@@ -1,13 +1,13 @@
 PODS:
-  - AudioKit (4.0.2):
-    - AudioKit/UI (= 4.0.2)
-  - AudioKit/UI (4.0.2)
+  - AudioKit (4.0.4):
+    - AudioKit/UI (= 4.0.4)
+  - AudioKit/UI (4.0.4)
 
 DEPENDENCIES:
   - AudioKit
 
 SPEC CHECKSUMS:
-  AudioKit: 97b73bda168c47191a9ba310eea00f9c7b5662d1
+  AudioKit: 647145c0462dc9dc8a8582998cd6db5f2e1ea848
 
 PODFILE CHECKSUM: ee8d745532be2097e564662a910dcd9a27075727
 

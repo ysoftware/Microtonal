@@ -50,7 +50,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
                 }
         })
     }
-    
+
     @IBAction func loadTuning(_ sender: Any) {
         let alert = UIAlertController(title: "Load a tuning",
                                       message: "Name or url of an .scl file.",
@@ -86,7 +86,7 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         if  currentTuning >= Tunings.tunings.count {
             currentTuning = 0
         }
-        loadTuning()
+		loadTuning(from: BASEURL + Tunings.tunings[currentTuning])
     }
     
     @IBAction func higherOctave(_ sender: Any) {
@@ -174,8 +174,8 @@ class ViewController: UIViewController, AKKeyboardDelegate {
         }
     }
     
-    func loadTuning() {
-        let url = URL(string: BASEURL + Tunings.tunings[currentTuning])!
+	func loadTuning(from url:String) {
+		guard let url = URL(string: url) else { return }
         if let freqs = Tunings.loadFrequencies(from: url) {
             sound.tuningTable.tuningTable(fromFrequencies: freqs)
             label.text = url.lastPathComponent
