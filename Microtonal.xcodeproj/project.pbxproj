@@ -14,31 +14,12 @@
 		716B3B851F65994B00AADA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B831F65994B00AADA1A /* Main.storyboard */; };
 		716B3B871F65994B00AADA1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B861F65994B00AADA1A /* Assets.xcassets */; };
 		716B3B8A1F65994B00AADA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716B3B881F65994B00AADA1A /* LaunchScreen.storyboard */; };
-		716B3B951F65994B00AADA1A /* MicrotonalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B941F65994B00AADA1A /* MicrotonalTests.swift */; };
-		716B3BA01F65994B00AADA1A /* MicrotonalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */; };
 		716B3BB41F65A2C800AADA1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB31F65A2C800AADA1A /* Extensions.swift */; };
 		716B3BB81F65A85E00AADA1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BB71F65A85E00AADA1A /* Constants.swift */; };
 		716B3BBF1F65B5C400AADA1A /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B3BBE1F65B5C400AADA1A /* Sound.swift */; };
 		7178C2061F797904005BDC27 /* MIDIReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C2051F797904005BDC27 /* MIDIReceiver.swift */; };
 		D5687B76B3BE69792340B044 /* Pods_Microtonal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		716B3B911F65994B00AADA1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 716B3B741F65994B00AADA1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 716B3B7B1F65994B00AADA1A;
-			remoteInfo = Microtonal;
-		};
-		716B3B9C1F65994B00AADA1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 716B3B741F65994B00AADA1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 716B3B7B1F65994B00AADA1A;
-			remoteInfo = Microtonal;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		126907775F05AD1D2648DA67 /* Pods_Microtonal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Microtonal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,12 +33,6 @@
 		716B3B861F65994B00AADA1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716B3B891F65994B00AADA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716B3B8B1F65994B00AADA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		716B3B901F65994B00AADA1A /* MicrotonalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicrotonalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		716B3B941F65994B00AADA1A /* MicrotonalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrotonalTests.swift; sourceTree = "<group>"; };
-		716B3B961F65994B00AADA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		716B3B9B1F65994B00AADA1A /* MicrotonalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicrotonalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrotonalUITests.swift; sourceTree = "<group>"; };
-		716B3BA11F65994B00AADA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716B3BB31F65A2C800AADA1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		716B3BB71F65A85E00AADA1A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		716B3BBE1F65B5C400AADA1A /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -79,20 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716B3B8D1F65994B00AADA1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		716B3B981F65994B00AADA1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				716B3B7E1F65994B00AADA1A /* Microtonal */,
-				716B3B931F65994B00AADA1A /* MicrotonalTests */,
-				716B3B9E1F65994B00AADA1A /* MicrotonalUITests */,
 				716B3B7D1F65994B00AADA1A /* Products */,
 				59EE1F9928D1C6C95CA78A66 /* Pods */,
 				98B217592E3B44A9DE335BF7 /* Frameworks */,
@@ -121,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				716B3B7C1F65994B00AADA1A /* Microtonal.app */,
-				716B3B901F65994B00AADA1A /* MicrotonalTests.xctest */,
-				716B3B9B1F65994B00AADA1A /* MicrotonalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,24 +95,6 @@
 				716B3BBD1F65B1EC00AADA1A /* Stuff */,
 			);
 			path = Microtonal;
-			sourceTree = "<group>";
-		};
-		716B3B931F65994B00AADA1A /* MicrotonalTests */ = {
-			isa = PBXGroup;
-			children = (
-				716B3B941F65994B00AADA1A /* MicrotonalTests.swift */,
-				716B3B961F65994B00AADA1A /* Info.plist */,
-			);
-			path = MicrotonalTests;
-			sourceTree = "<group>";
-		};
-		716B3B9E1F65994B00AADA1A /* MicrotonalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				716B3B9F1F65994B00AADA1A /* MicrotonalUITests.swift */,
-				716B3BA11F65994B00AADA1A /* Info.plist */,
-			);
-			path = MicrotonalUITests;
 			sourceTree = "<group>";
 		};
 		716B3BAD1F659A9F00AADA1A /* Sound */ = {
@@ -217,42 +156,6 @@
 			productReference = 716B3B7C1F65994B00AADA1A /* Microtonal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		716B3B8F1F65994B00AADA1A /* MicrotonalTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 716B3BA71F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalTests" */;
-			buildPhases = (
-				716B3B8C1F65994B00AADA1A /* Sources */,
-				716B3B8D1F65994B00AADA1A /* Frameworks */,
-				716B3B8E1F65994B00AADA1A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				716B3B921F65994B00AADA1A /* PBXTargetDependency */,
-			);
-			name = MicrotonalTests;
-			productName = MicrotonalTests;
-			productReference = 716B3B901F65994B00AADA1A /* MicrotonalTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		716B3B9A1F65994B00AADA1A /* MicrotonalUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 716B3BAA1F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalUITests" */;
-			buildPhases = (
-				716B3B971F65994B00AADA1A /* Sources */,
-				716B3B981F65994B00AADA1A /* Frameworks */,
-				716B3B991F65994B00AADA1A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				716B3B9D1F65994B00AADA1A /* PBXTargetDependency */,
-			);
-			name = MicrotonalUITests;
-			productName = MicrotonalUITests;
-			productReference = 716B3B9B1F65994B00AADA1A /* MicrotonalUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,18 +170,6 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = S422Q897FZ;
 						ProvisioningStyle = Automatic;
-					};
-					716B3B8F1F65994B00AADA1A = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = S422Q897FZ;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 716B3B7B1F65994B00AADA1A;
-					};
-					716B3B9A1F65994B00AADA1A = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = S422Q897FZ;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 716B3B7B1F65994B00AADA1A;
 					};
 				};
 			};
@@ -296,8 +187,6 @@
 			projectRoot = "";
 			targets = (
 				716B3B7B1F65994B00AADA1A /* Microtonal */,
-				716B3B8F1F65994B00AADA1A /* MicrotonalTests */,
-				716B3B9A1F65994B00AADA1A /* MicrotonalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,20 +199,6 @@
 				716B3B8A1F65994B00AADA1A /* LaunchScreen.storyboard in Resources */,
 				716B3B871F65994B00AADA1A /* Assets.xcassets in Resources */,
 				716B3B851F65994B00AADA1A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		716B3B8E1F65994B00AADA1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		716B3B991F65994B00AADA1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,36 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716B3B8C1F65994B00AADA1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				716B3B951F65994B00AADA1A /* MicrotonalTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		716B3B971F65994B00AADA1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				716B3BA01F65994B00AADA1A /* MicrotonalUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		716B3B921F65994B00AADA1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 716B3B7B1F65994B00AADA1A /* Microtonal */;
-			targetProxy = 716B3B911F65994B00AADA1A /* PBXContainerItemProxy */;
-		};
-		716B3B9D1F65994B00AADA1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 716B3B7B1F65994B00AADA1A /* Microtonal */;
-			targetProxy = 716B3B9C1F65994B00AADA1A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		716B3B831F65994B00AADA1A /* Main.storyboard */ = {
@@ -601,64 +447,6 @@
 			};
 			name = Release;
 		};
-		716B3BA81F65994B00AADA1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S422Q897FZ;
-				INFOPLIST_FILE = MicrotonalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysoftware.MicrotonalTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Microtonal.app/Microtonal";
-			};
-			name = Debug;
-		};
-		716B3BA91F65994B00AADA1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S422Q897FZ;
-				INFOPLIST_FILE = MicrotonalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysoftware.MicrotonalTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Microtonal.app/Microtonal";
-			};
-			name = Release;
-		};
-		716B3BAB1F65994B00AADA1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = S422Q897FZ;
-				INFOPLIST_FILE = MicrotonalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysoftware.MicrotonalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Microtonal;
-			};
-			name = Debug;
-		};
-		716B3BAC1F65994B00AADA1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = S422Q897FZ;
-				INFOPLIST_FILE = MicrotonalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysoftware.MicrotonalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Microtonal;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -676,24 +464,6 @@
 			buildConfigurations = (
 				716B3BA51F65994B00AADA1A /* Debug */,
 				716B3BA61F65994B00AADA1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		716B3BA71F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				716B3BA81F65994B00AADA1A /* Debug */,
-				716B3BA91F65994B00AADA1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		716B3BAA1F65994B00AADA1A /* Build configuration list for PBXNativeTarget "MicrotonalUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				716B3BAB1F65994B00AADA1A /* Debug */,
-				716B3BAC1F65994B00AADA1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
